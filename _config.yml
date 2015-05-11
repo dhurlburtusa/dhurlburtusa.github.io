@@ -1,0 +1,11 @@
+# See [Jekyll Configuration](http://jekyllrb.com/docs/configuration/)
+
+root: 
+
+safe: true
+
+keep_files: []
+encoding: "utf-8"
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
