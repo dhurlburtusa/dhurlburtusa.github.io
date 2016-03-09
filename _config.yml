@@ -1,11 +1,51 @@
 # See [Jekyll Configuration](http://jekyllrb.com/docs/configuration/)
 
-root: 
+# Site Settings
+#baseurl: &baseurl "/home/repos/git/github/dhurlburtusa.github.io/_site"
+baseurl: &baseurl "https://dhurlburtusa.github.io"
 
-safe: true
+description: >
+  Dan Hurlburt, senior software developer, senior web application developer.
+  Dan Hurlburt started learning HTML, CSS, and JavaScript over ten years ago.
 
-keep_files: []
-encoding: "utf-8"
 exclude:
-  - "Gemfile"
-  - "Gemfile.lock"
+  - Gemfile
+  - Gemfile.lock
+
+link:
+  google_fonts_open_sans_400_700:
+    href: http://fonts.googleapis.com/css?family=Open+Sans:400,700
+  normalize:
+    base_path: *baseurl
+    path: /static/css/normalize-3.0.1/normalize.css
+  stylesheet:
+    base_path: *baseurl
+    path: /static/css/stylesheet.css
+
+timezone: America/Denver
+
+title: Dan Hurlburt
+
+# Default Page Settings
+
+defaults:
+  - 
+    scope:
+      path: ""
+    values:
+      doc:
+        html:
+          head:
+            lang: en_US
+            meta:
+              http_equiv:
+                X_UA_Compatible: IE=edge
+              name:
+                author: Danny Hurlburt
+                viewport: width=device-width, initial-scale=1
+            link:
+              stylesheets:
+                defaults:
+                  - google_fonts_open_sans_400_700
+                  - normalize
+                  - stylesheet

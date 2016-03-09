@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="{{ page.doc.html.head.cls }}" lang="{{ page.doc.html.head.lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.doc.html.head.title }}</title>
+  {% if page.doc.html.head.meta.http_equiv.X_UA_Compatible %}
+    <meta http-equiv="X-UA-Compatible" content="{{ page.doc.html.head.meta.http_equiv.X_UA_Compatible }}">
+  {% endif %}
+  {% if page.doc.html.head.meta.name.viewport %}
+    <meta name="viewport" content="{{ page.doc.html.head.meta.name.viewport }}">
+  {% endif %}
+  <meta name="author" content="{{ page.doc.html.head.meta.name.author }}">
+  <meta name="description" content="{% if page.doc.html.head.meta.name.description %}{{ page.doc.html.head.meta.name.description | strip_newlines }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
+  {% assign categories = "defaults,extras" | split: "," %}
+  {% for category in categories %}
+    {% for stylesheet_id in page.doc.html.head.link.stylesheets[category] %}
+      {% if site.link[stylesheet_id] %}
+        {% assign stylesheet = site.link[stylesheet_id] %}
+        <link href="{{ stylesheet.href }}{{ stylesheet.base_path }}{{ stylesheet.path }}" rel="stylesheet">
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{{ page.doc.html.head.style }}
+{% for script_id in page.doc.html.head.scripts %}
+  {% if site.script[script_id] %}
+    {% assign script = site.script[script_id] %}
+    <script src="{{ script.src }}{{ script.base_path }}{{ script.path }}"{%if script.type %} type="script.type"{% endif %}></script>
+  {% endif %}
+{% endfor %}
+{{ page.doc.html.head.script }}
+</head>
+<body class="{{ page.doc.html.body.cls }}"{% if page.doc.html.body.role %} role="{{ page.doc.html.body.role }}"{% endif %}>
+{{ content }}
+{% for script_id in page.doc.html.body.scripts %}
+  {% if site.script[script_id] %}
+    {% assign script = site.script[script_id] %}
+    <script src="{{ script.src }}{{ script.base_path }}{{ script.path }}"{%if script.type %} type="script.type"{% endif %}></script>
+  {% endif %}
+{% endfor %}
+{{ page.doc.html.body.script }}
+</body>
+</html>

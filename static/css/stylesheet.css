@@ -14,7 +14,6 @@
   - Page-hd Rules
   - Page-ft Rules
 * Site-Specific Component Rules
-  - GhProj Component Rules
   - Btn Component Rules
   - Menubar Component Rules
 
@@ -27,6 +26,12 @@
 * { box-sizing: border-box; }
 
 body { margin: 0; padding: 0; }
+
+/* *******************************************************************************************************************
+# Foundation Utilitiy Rules
+******************************************************************************************************************* */
+
+.seo-only { box-sizing: border-box; height: 4px; margin: 0; padding: 0; padding-top: 4px; overflow: hidden; }
 
 /* *******************************************************************************************************************
 # Foundation Component Rules
@@ -118,7 +123,7 @@ hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border:
 ******************************************************************************************************************* */
 
 @media screen and (min-width: 64em) {
-    .page-width-constrained { max-width: 64rem; margin: 0 auto; }
+    .l-Page--fixedWidth { max-width: 64rem; margin: 0 auto; }
 }
 
 /* *******************************************************************************************************************
@@ -126,45 +131,12 @@ hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border:
 ******************************************************************************************************************* */
 
 /* -------------------------------------------------------------------------------------------------------------------
-# Site-Specific Page-bd Rules
-------------------------------------------------------------------------------------------------------------------- */
-
-.Page-bd :first-child { margin-top: 0; }
-
-@media screen and (min-width: 64em) {
-    .Page-bd { padding: 2rem 6rem; font-size: 1.1rem; }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .Page-bd { padding: 2rem 4rem; font-size: 1.1rem; }
-}
-
-@media screen and (max-width: 42em) {
-    .Page-bd { padding: 2rem 1rem; font-size: 1rem; }
-}
-
-/* -------------------------------------------------------------------------------------------------------------------
 # Site-Specific Page-hd Rules
 ------------------------------------------------------------------------------------------------------------------- */
 
-/*
-# Site-Specific Page-hd--masthead Rules
---------------------------------------------------------------------------- */
-
-.Page-hd--masthead { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
-
-
-@media screen and (min-width: 64em) {
-    .Page-hd--masthead { padding: 5rem 6rem; }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .Page-hd--masthead { padding: 3rem 4rem; }
-}
-
-@media screen and (max-width: 42em) {
-    .Page-hd--masthead { padding: 2rem 1rem; }
-}
+/* -------------------------------------------------------------------------------------------------------------------
+# Site-Specific Page-bd Rules
+------------------------------------------------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------------------------------------------------
 # Site-Specific Page-ft Rules
@@ -188,29 +160,50 @@ hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border:
     .Page-ft { padding: 1rem 1rem 2rem; font-size: 0.9rem; }
 }
 
-/* *******************************************************************************************************************
-# Site-Specific Component Rules
-******************************************************************************************************************* */
-
 /* -------------------------------------------------------------------------------------------------------------------
-# Site-Specific GhProj Component Rules
-
-These are the Github project related components.
+# Site-Specific Main-bd Rules
 ------------------------------------------------------------------------------------------------------------------- */
 
-.Title--site { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
+.Main-bd p:first-of-type { margin-top: 0; }
 
 @media screen and (min-width: 64em) {
-    .Title--site { font-size: 3.25rem; }
+    .Main-bd { padding: 2rem 6rem; font-size: 1.1rem; }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-    .Title--site { font-size: 2.25rem; }
+    .Main-bd { padding: 2rem 4rem; font-size: 1.1rem; }
 }
 
 @media screen and (max-width: 42em) {
-    .Title--site { font-size: 1.75rem; }
+    .Main-bd { padding: 2rem 1rem; font-size: 1rem; }
 }
+
+/*
+# Site-Specific Main-hd-masthead Rules
+--------------------------------------------------------------------------- */
+
+.Main-hd-masthead { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
+
+.Main-hd-masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
+
+@media screen and (min-width: 64em) {
+    .Main-hd-masthead { padding: 5rem 6rem; }
+    .Main-hd-masthead-name { font-size: 3.25rem; }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .Main-hd-masthead { padding: 3rem 4rem; }
+    .Main-hd-masthead-name { font-size: 2.25rem; }
+}
+
+@media screen and (max-width: 42em) {
+    .Main-hd-masthead { padding: 2rem 1rem; }
+    .Main-hd-masthead-name { font-size: 1.75rem; }
+}
+
+/* *******************************************************************************************************************
+# Site-Specific Component Rules
+******************************************************************************************************************* */
 
 /* -------------------------------------------------------------------------------------------------------------------
 # Site-Specific Btn Component Rules
