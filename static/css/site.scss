@@ -183,26 +183,26 @@ hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border:
 }
 
 /*
-# Site-Specific Main-hd-masthead Rules
+# Site-Specific Masthead--danHurlburt Rules
 --------------------------------------------------------------------------- */
 
-.Main-hd-masthead { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
+.Masthead--danHurlburt { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
 
-.Main-hd-masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
+.Masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
 
 @media screen and (min-width: 64em) {
-    .Main-hd-masthead { padding: 5rem 6rem; }
-    .Main-hd-masthead-name { font-size: 3.25rem; }
+    .Masthead--danHurlburt { padding: 5rem 6rem; }
+    .Masthead-name { font-size: 3.25rem; }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-    .Main-hd-masthead { padding: 3rem 4rem; }
-    .Main-hd-masthead-name { font-size: 2.25rem; }
+    .Masthead--danHurlburt { padding: 3rem 4rem; }
+    .Masthead-name { font-size: 2.25rem; }
 }
 
 @media screen and (max-width: 42em) {
-    .Main-hd-masthead { padding: 2rem 1rem; }
-    .Main-hd-masthead-name { font-size: 1.75rem; }
+    .Masthead--danHurlburt { padding: 2rem 1rem; }
+    .Masthead-name { font-size: 1.75rem; }
 }
 
 /* *******************************************************************************************************************
