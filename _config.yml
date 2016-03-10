@@ -18,9 +18,9 @@ link:
   normalize:
     base_path: *baseurl
     path: /static/css/normalize-3.0.1/normalize.css
-  stylesheet:
+  site:
     base_path: *baseurl
-    path: /static/css/stylesheet.css
+    path: /static/css/site.css
 
 timezone: America/Denver
 
@@ -48,4 +48,4 @@ defaults:
                 defaults:
                   - google_fonts_open_sans_400_700
                   - normalize
-                  - stylesheet
+                  - site
