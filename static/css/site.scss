@@ -60,7 +60,8 @@ body { margin: 0; padding: 0; }
 /* *******************************************************************************************************************
 # Site-Specific Element Rules
 ******************************************************************************************************************* */
-
+/* Override Bootstrap font-size value for html. */
+html { font-size: inherit; }  
 body { color: #606c71; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
 
 a { color: #1e6bb8; text-decoration: none; }
@@ -189,6 +190,8 @@ hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border:
 .Masthead--danHurlburt { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
 
 .Masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
+/* Override Bootstrap values for h1. */
+.Masthead-name { font-weight: bold; line-height: 1.5; }
 
 @media screen and (min-width: 64em) {
   .Masthead--danHurlburt { padding: 5rem 6rem; }

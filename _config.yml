@@ -13,6 +13,8 @@ exclude:
   - Gemfile.lock
 
 link:
+  bootstrap:
+    href: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
   google_fonts_open_sans_400_700:
     href: https://fonts.googleapis.com/css?family=Open+Sans:400,700
   normalize:
@@ -47,5 +49,5 @@ defaults:
               stylesheets:
                 defaults:
                   - google_fonts_open_sans_400_700
-                  - normalize
+                  - bootstrap
                   - site
