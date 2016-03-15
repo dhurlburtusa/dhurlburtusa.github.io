@@ -17,9 +17,6 @@ link:
     href: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
   google_fonts_open_sans_400_700:
     href: https://fonts.googleapis.com/css?family=Open+Sans:400,700
-  normalize:
-    base_path: *baseurl
-    path: /static/css/normalize-3.0.1/normalize.css
   site:
     base_path: *baseurl
     path: /static/css/site.css
