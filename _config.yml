@@ -14,7 +14,8 @@ exclude:
 
 link:
   bootstrap:
-    href: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
+    base_path: *baseurl
+    path: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
   google_fonts_open_sans_400_700:
     href: https://fonts.googleapis.com/css?family=Open+Sans:400,700
   site:
