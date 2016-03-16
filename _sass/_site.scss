@@ -55,11 +55,7 @@
   # Foundation Menubar Component Rules
   ------------------------------------------------------------------------------------------------------------------*/
 
-    .Menubar { margin: 0; padding: 0; list-style: none; }
-    .Menubar::before,
-    .Menubar::after { content: " "; display: table; }
-    .Menubar::after { clear: both; }
-    .Menubar > li { float: left; display: block; }
+    @import "lib/components/Menubar";
 
 /* *******************************************************************************************************************
 # Site-Specific Element Rules
@@ -264,5 +260,5 @@
   ----------------------------------------------------------------------------------------------------------------- */
 
     .Menubar { background: #444; }
-    .Menubar a { display: block; padding: 0.75rem 1rem; color: white; transition: color 0.2s, background-color 0.2s; }
-    .Menubar a:hover { background: #159957; background: #1E6BB8; text-decoration: none; }
+    .Menubar a { padding: 0.75rem 1rem; color: white; transition: background-color 0.2s; }
+    .Menubar a:hover { background: #1E6BB8; text-decoration: none; }

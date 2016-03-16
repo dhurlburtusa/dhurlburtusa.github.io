@@ -1,0 +1,94 @@
+
+  /* -----------------------------------------------------------------------------------------------------------------
+  # Menubar Component
+
+  A `Menubar` component represents a menubar and is primarily designed to contain `Menubar-item` components but may
+  contain other components.  In some cases, `Menubar-items` in the `Menubar` will probably have a `Menu` component
+  associated with it that is displayed when the `Menubar-item` is activated.
+
+  ## Markup
+
+  <ul> class="Menubar  {property-classes}*" disabled? role="menubar"?
+    {Menubar-item}*
+  ----------------------------------------------------------------------------------------------------------------- */
+    .Menubar { margin: 0; padding: 0; list-style: none; }
+    /* Apply a clearfix for any floated children. */
+    .Menubar:before,
+    .Menubar:after { display: table !important; content: " " !important; }
+    .Menubar:after { clear: both !important; }
+
+  /*
+  # Menubar-item Component
+
+  A `Menubar-item` component represents an item inside a `Menubar` component.
+
+  ## Markup
+
+  <li> class="Menubar-item?  is-selected?  {property-classes}*" disabled?
+    [{Button}|{Link}|{Menu}|{other-components}|{other-elements}]*
+
+  The `Menubar-item` class is optional for modern browsers.
+  ------------------------------------------------------------------------- */
+    .Menubar > li,
+    .Menubar-item { float: left; display: block; }
+
+    .Menubar > li.is-selected,
+    .Menubar-item.is-selected {}
+
+  /*
+  # Menubar-item-btn Component
+
+  A `Menubar-item-btn` component represents a button inside a `Menubar-item` component.
+
+  ## Markup
+
+  <a>|<button> class="Menubar-item-btn?  Btn?  active?  {property-classes}*" disabled?
+
+  If a `button` is used, then `Menubar-item-btn` and `Btn` are optional.
+  If an `a` is used, then at least one of `Menubar-item-btn` or `Btn` is required.
+  ------------------------------------------------------------------------- */
+    .Menubar > li > button,
+    .Menubar > li > .Btn,
+    .Menubar-item > button,
+    .Menubar-item > .Btn,
+    .Menubar-item-btn { display: block; }
+
+  /*
+  # Menubar-item-link Component
+
+  A `Menubar-item-link` component represents a `Link` inside a `Menubar-item` component.
+
+  ## Markup
+
+  <a>|<button> class="Menubar-item-link?  Link?  active?  {property-classes}*" disabled?
+
+  If an `a` is used, then `Menubar-item-link` and `Link` are optional.
+  If a `button` is used, then at least one of `Menubar-item-link` or `Link` is required.
+  ------------------------------------------------------------------------- */
+    .Menubar > li > a,
+    .Menubar > li > .Link,
+    .Menubar-item > a,
+    .Menubar-item > .Link,
+    .Menubar-item-link { display: block; }
+
+  /*
+  # Menubar-item-menu Component
+
+  A `Menubar-item-menu` component represents a `Menu` inside a `Menubar-item` component.
+
+  ## Markup
+
+  <ul> class="Menu  Menubar-item-menu?  {property-classes}*" disabled? role="menu"?
+    {Menu-item}*
+
+  ## Implementation Note
+
+  The choice of using negative offsets instead of something like `display: none` is for accessibility reasons.
+  ------------------------------------------------------------------------- */
+    .Menubar > li > .Menu,
+    .Menubar-item > .Menu,
+    .Menubar-item-menu { position: absolute; left: -9999rem; z-index: 1; }
+    .Menubar > li:hover > .Menu,
+    .Menubar-item:hover > .Menu,
+    .Menubar-item:hover .Menubar-item-menu { left: auto; }
+
