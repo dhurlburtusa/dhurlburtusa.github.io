@@ -1,11 +1,11 @@
-<section class="Main" id="main">
-  <header class="Main-hd" id="mainHd">
-{{ include.header }}
+<section class="Main  {{ include.cls }}" id="main" {{ include.attrs }}>
+  <header class="Main-hd  {{ include.hd_cls }}" id="mainHd" {{ include.hd_attrs }}>
+{{ include.hd }}
   </header>
-  <main class="Main-bd" id="mainBd">
-{{ include.body }}
+  <main class="Main-bd  {{ include.bd_cls }}" id="mainBd" {{ include.bd_attrs }}>
+{{ include.bd }}
   </main>
-  <footer class="Main-ft" id="mainFt">
-{{ include.footer }}
+  <footer class="Main-ft  {{ include.ft_cls }}" id="mainFt" {{ include.ft_attrs }}>
+{{ include.ft }}
   </footer>
 </section>
