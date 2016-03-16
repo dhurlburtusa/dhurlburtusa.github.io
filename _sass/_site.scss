@@ -11,18 +11,19 @@
   - Btn Component Rules
   - Menubar Component Rules
 * Site-Specific Element Rules
-* Site-Specific Attribute Style Rules
+* Site-Specific Attribute Rules
 * Site-Specific Region Rules
   - Page-bd Rules
   - Page-hd Rules
   - Page-ft Rules
-  - Main-bd Rules
 * Site-Specific Component Rules
   - Btn Component Rules
   - Menubar Component Rules
 
 ################################################################################################################### */
 
+@import "variables";
+border-radius
 /* *******************************************************************************************************************
 # Foundation Element Rules
 ******************************************************************************************************************* */
@@ -45,15 +46,14 @@
 # Foundation Component Rules
 ******************************************************************************************************************* */
 
+    @import "lib/layouts/Page";
+
   /* -----------------------------------------------------------------------------------------------------------------
   # Foundation Btn Component Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
     .Btn { display: inline-block; }
 
-  /* -----------------------------------------------------------------------------------------------------------------
-  # Foundation Menubar Component Rules
-  ------------------------------------------------------------------------------------------------------------------*/
 
     @import "lib/components/Menubar";
 
@@ -63,7 +63,7 @@
 
     /* Override Bootstrap font-size value for html. */
     html { font-size: inherit; }  
-    body { color: #606C71; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+    body { color: $body_color; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
 
     a { color: #1E6BB8; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -73,21 +73,22 @@
     h3,
     h4,
     h5,
-    h6 { margin-top: 2rem; margin-bottom: 1rem; color: #159957; }
+    h6 { color: #159957; }
 
-    p { margin-bottom: 1em; }
+    p { margin-bottom: $margin-tb; }
+    p:first-of-type { margin-top: $margin-tb; }
 
     code { padding: 2px 4px; background-color: #F3F6FA; border-radius: 0.3rem; color: #383E41; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; }
 
     pre {
-      margin-top: 0; margin-bottom: 1rem; padding: 0.8rem;
+      margin-top: 0; margin-bottom: $margin-tb; padding: 0.8rem;
       background-color: #F3F6Fa; border: solid 1px #DCE6F0; border-radius: 0.3rem; color: #567482; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; word-wrap: normal;
     }
     pre > code {
       margin: 0; padding: 0;
       background: transparent; border: 0; color: #567482; font-size: 0.9rem; white-space: pre; word-break: normal;
     }
-    .highlight { margin-bottom: 1rem; }
+    .highlight { margin-bottom: $margin-tb; }
     .highlight pre { margin-bottom: 0; word-break: normal; }
     .highlight pre,
     pre {
@@ -106,7 +107,7 @@
     ul,
     ol { margin-top: 0; }
 
-    blockquote { margin-left: 0; padding: 0 1rem; border-left: 0.3rem solid #DCE6F0; color: #819198; }
+    blockquote { margin-left: 0; padding: 0 $padding-lr; border-left: 0.3rem solid #DCE6F0; color: #819198; }
     blockquote > :first-child { margin-top: 0; }
     blockquote > :last-child { margin-bottom: 0; }
 
@@ -116,21 +117,22 @@
     }
     table th { font-weight: bold; }
     table th,
-    table td { padding: 0.5rem 1rem; border: 1px solid #E9EBEC; }
+    table td { padding: $padding-tb / 2 $padding-lr; border: 1px solid #E9EBEC; }
 
     dl { padding: 0; }
-    dl dt { margin-top: 1rem; padding: 0; font-size: 1rem; font-weight: bold; }
-    dl dd { margin-bottom: 1rem; padding: 0; }
+    dl dt { margin-top: $margin-tb; padding: 0; font-size: 1rem; font-weight: bold; }
+    dl dd { margin-bottom: $margin-tb; padding: 0; }
 
-    hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #EFF0F1; border: 0; }
+    hr { height: 2px; margin: $margin-tb 0; padding: 0; background-color: #EFF0F1; border: 0; }
 
 /* *******************************************************************************************************************
-# Site-Specific Attribute Style Rules
+# Site-Specific Attribute Rules
 ******************************************************************************************************************* */
 
-    @media screen and (min-width: 64em) {
-      .l-Page--fixedWidth { max-width: 64rem; margin: 0 auto; }
-    }
+    .with-padding { padding: $padding !important; }
+    .with-padded-sides { padding-left: $padding-lr !important; padding-right: $padding-lr !important; }
+
+    .with-margin-bottom { margin-bottom: $margin-tb !important; }
 
 /* *******************************************************************************************************************
 # Site-Specific Region Rules
@@ -140,6 +142,8 @@
   # Site-Specific Page-hd Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
+    .Page-hd { background: $Page-hd_background-color; }
+
   /* -----------------------------------------------------------------------------------------------------------------
   # Site-Specific Page-bd Rules
   ----------------------------------------------------------------------------------------------------------------- */
@@ -148,41 +152,11 @@
   # Site-Specific Page-ft Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-    .Page-ft { margin-top: 1rem; border-top: solid 1px #EFF0F1; }
+    .Page-ft { padding-bottom: $padding-tb; }
 
     .Page-ft-owner { display: block; font-weight: bold; }
 
     .Page-ft-credits { color: #819198; }
-
-    @media screen and (min-width: 64em) {
-      .Page-ft { padding: 1rem 6rem 2rem; font-size: 1rem; }
-    }
-
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-      .Page-ft { padding: 1rem 4rem 2rem; font-size: 1rem; }
-    }
-
-    @media screen and (max-width: 42em) {
-      .Page-ft { padding: 1rem 1rem 2rem; font-size: 0.9rem; }
-    }
-
-  /* -----------------------------------------------------------------------------------------------------------------
-  # Site-Specific Main-bd Rules
-  ----------------------------------------------------------------------------------------------------------------- */
-
-    .Main-bd p:first-of-type { margin-top: 0; }
-
-    @media screen and (min-width: 64em) {
-      .Main-bd { padding: 2rem 6rem; font-size: 1.1rem; }
-    }
-
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-      .Main-bd { padding: 2rem 4rem; font-size: 1.1rem; }
-    }
-
-    @media screen and (max-width: 42em) {
-      .Main-bd { padding: 2rem 1rem; font-size: 1rem; }
-    }
 
 /* *******************************************************************************************************************
 # Site-Specific Component Rules
@@ -196,43 +170,49 @@
       margin-bottom: 1rem;
       background-color: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     }
-    .Btn + .Btn { margin-left: 1rem; }
+    .Btn + .Btn { margin-left: $margin-tb; }
 
     .Btn:hover {
       background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); color: rgba(255, 255, 255, 0.8); text-decoration: none;
+    }
+
+    @media screen and (min-width: 28em) {
+      .Btn { display: block; width: 100%; padding: 0.75rem; font-size: 0.9rem; }
+      .Btn + .Btn { margin-top: $margin-tb; margin-left: 0; }
+    }
+
+    @media screen and (min-width: 40em) {
+      .Btn { padding: 0.6rem 0.9rem; font-size: 0.9rem; }
+    }
+
+    @media screen and (min-width: 52em) {
     }
 
     @media screen and (min-width: 64em) {
       .Btn { padding: 0.75rem 1rem; }
     }
 
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-      .Btn { padding: 0.6rem 0.9rem; font-size: 0.9rem; }
-    }
-
-    @media screen and (max-width: 42em) {
-      .Btn { display: block; width: 100%; padding: 0.75rem; font-size: 0.9rem; }
-      .Btn + .Btn { margin-top: 1rem; margin-left: 0; }
-    }
-
   /* -----------------------------------------------------------------------------------------------------------------
-  # Site-Specific Masthead Rules
+  # Site-Specific Masthead Component Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-    .Masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #FFF; }
+    .Masthead-name { color: #FFF; }
     /* Override Bootstrap values for h1. */
-    .Masthead-name { font-weight: bold; line-height: 1.5; }
+    .Masthead-name { margin: 2rem 0; font-size: 2rem; font-weight: bold; }
+
+    @media screen and (min-width: 28em) {
+    }
+
+    @media screen and (min-width: 42em) {
+      .Masthead-name { font-size: 2.5rem; }
+    }
+
+    @media screen and (min-width: 52em) {
+      .Masthead-name { font-size: 3rem; }
+    }
 
     @media screen and (min-width: 64em) {
-      .Masthead-name { font-size: 3.25rem; }
-    }
-
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-      .Masthead-name { font-size: 2.25rem; }
-    }
-
-    @media screen and (max-width: 42em) {
-      .Masthead-name { font-size: 1.75rem; }
+      .Masthead-name { font-size: 3.5rem; }
     }
 
   /*
@@ -243,22 +223,24 @@
 
     .Masthead--danHurlburt { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #FFF; text-align: center; }
 
+    @media screen and (min-width: 28em) {
+    }
+
+    @media screen and (min-width: 42em) {
+      .Masthead--danHurlburt { padding-top: 2rem; padding-bottom: 2em; }
+    }
+
+    @media screen and (min-width: 52em) {
+      .Masthead--danHurlburt { padding-top: 3rem; padding-bottom: 3em; }
+    }
+
     @media screen and (min-width: 64em) {
-      .Masthead--danHurlburt { padding: 5rem 6rem; }
-    }
-
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-      .Masthead--danHurlburt { padding: 3rem 4rem; }
-    }
-
-    @media screen and (max-width: 42em) {
-      .Masthead--danHurlburt { padding: 2rem 1rem; }
+      .Masthead--danHurlburt { padding-top: 4rem; padding-bottom: 4em; }
     }
 
   /* -----------------------------------------------------------------------------------------------------------------
   # Site-Specific Menubar Component Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-    .Menubar { background: #444; }
-    .Menubar a { padding: 0.75rem 1rem; color: white; transition: background-color 0.2s; }
+    .Menubar a { padding: 0.75 * $padding $padding; color: white; transition: background-color 0.2s; }
     .Menubar a:hover { background: #1E6BB8; text-decoration: none; }

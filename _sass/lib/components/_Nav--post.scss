@@ -1,0 +1,17 @@
+
+/* -------------------------------------------------------------------------------------------------------------------
+# Nav--post Component
+
+## Markup
+
+<div> class="Nav  Nav--post  is-single?  {property-classes}*"
+  <a|span> class="Nav--post-prev  has-none?  {property-classes}*"
+  <a|span> class="Nav--post-next  has-none?  {property-classes}*"
+------------------------------------------------------------------------------------------------------------------- */
+  /* Structural styles: */
+  
+  /* Presentation styles: */
+  .Nav--post.is-single { display: none; }
+
+  .Nav--post-next.has-none,
+  .Nav--post-prev.has-none { opacity: 0.75; }

@@ -1,0 +1,20 @@
+
+/* -------------------------------------------------------------------------------------------------------------------
+# Paginator Component
+
+## Markup
+
+<div> class="Paginator  is-single?  {property-classes}*"
+  <a|span> class="Paginator-prev  has-none?  {property-classes}*"
+  <span> class="Paginator-nums">
+    <span> class="current"
+    <span> class="total"
+  <a|span> class="Paginator-next  has-none?"
+------------------------------------------------------------------------------------------------------------------- */
+  /* Structural styles: */
+  
+  /* Presentation styles: */
+  .Paginator.is-single { display: none; }
+
+  .Paginator-next.has-none,
+  .Paginator-prev.has-none { opacity: 0.75; }

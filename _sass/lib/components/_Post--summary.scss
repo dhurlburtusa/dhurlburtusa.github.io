@@ -1,0 +1,25 @@
+
+/*
+# Post--summary Component
+
+A `Post` component specialization that only contains summary information.  Effectively, it is a `Post` with an
+excerpt in place of the article.
+
+## Markup
+
+<div> class="Post  Post--summary  {property-classes}*"
+  <header> class="Post-hd"
+    <h1|h2|h3|h4|h5|h6>
+      <a> class="Post-title"
+    <p>
+      <span> class="Post-author"
+      <span> class="Post-date"
+  <main> class="Post-bd"
+    <p> class="Post-excerpt"
+
+--------------------------------------------------------------------------- */
+  /* Structural styles: */
+  .Post--summary {}
+  
+  /* Presentation styles: */
+  .Post--summary {}

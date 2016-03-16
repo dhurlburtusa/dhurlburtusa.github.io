@@ -12,15 +12,29 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+gems: [jekyll-paginate]
+
 link:
+  blog:
+    base_path: *baseurl
+    path: /static/css/blog.css
   bootstrap:
     base_path: *baseurl
     path: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
   google_fonts_open_sans_400_700:
     href: https://fonts.googleapis.com/css?family=Open+Sans:400,700
+  properties:
+    href: /static/css/properties-1.0.1/properties.css
   site:
     base_path: *baseurl
     path: /static/css/site.css
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+permalink: /blog/:year/:month/:day/:title/
+
+excerpt_separator: <!-- stop excerpt -->
 
 timezone: America/Denver
 
@@ -48,4 +62,16 @@ defaults:
                 defaults:
                   - google_fonts_open_sans_400_700
                   - bootstrap
+                  - properties
                   - site
+  - 
+    scope:
+      path: blog
+    values:
+      doc:
+        html:
+          head:
+            link:
+              stylesheets:
+                extras:
+                  - blog

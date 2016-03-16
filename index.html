@@ -6,6 +6,23 @@ doc:
     head:
       cls: Doc  Doc--home
       title: Dan Hurlburt - Senior Software Developer - Front-End Engineer - dhurlburtusa
+      style: |
+        <style>
+          .IAm { margin: 2rem 0 !important; }
+
+          @media screen and (min-width: 28em) {
+          }
+
+          @media screen and (min-width: 42em) {
+            .IAm { font-size: 1.1rem !important; }
+          }
+
+          @media screen and (min-width: 52em) {
+          }
+
+          @media screen and (min-width: 64em) {
+          }
+        </style>
 ---
 
 {% capture header %}
@@ -19,7 +36,7 @@ doc:
 {% capture body %}
 {% include OldBrowserWarning.html %}
 {% include NoScriptWarning.html %}
-  <p>
+  <p class="IAm">
     I am a senior software developer who specializes in front-end and web application development.  I have over ten years of experience
     with client-side and server-side technologies.  I have a passion for in-depth knowledge of the APIs I use most.  I also
     enjoy testing out new technologies to further enhance my knowledge of current web trends.

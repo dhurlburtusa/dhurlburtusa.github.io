@@ -1,0 +1,40 @@
+---
+layout: page
+
+doc:
+  html:
+    head:
+      cls: no-js  Doc  Doc--blog  Doc--blog--index
+      title: Blog - DH
+title: DH Blog
+---
+
+{% capture header %}
+  <h2>{{ page.title }}</h2>
+{% endcapture %}
+
+{% capture body %}
+  {% for post in paginator.posts %}
+    <div class="Post  Post--summary">
+      <header class="Post-hd">
+        <h4 class="Post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+        <div class="Post-author-date">
+          <small class="Post-author">{{ post.author }}</small>
+          <small>&bull;</small>
+          <small class="Post-date">{{ post.date | date: "%F" }}</small>
+        </div>
+      </header>
+      <main class="Post-bd  Post-excerpt">
+        {{ post.excerpt }}
+      </main>
+    </div>
+  {% endfor %}
+{% endcapture %}
+
+{% capture footer %}
+<div class="Toolbar" role="toolbar">
+  {% include Paginator.html %}
+</div>
+{% endcapture %}
+
+{%include Main.html cls="l-Page--fixedWidth" hd=header bd=body ft=footer %}

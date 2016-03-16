@@ -1,0 +1,42 @@
+---
+# This Front Matter is necessary to get Jekyll to process this Sass file.
+---
+
+/* ###################################################################################################################
+# Blog Styles
+
+Theses are the blog styles that override or augment the site styles.
+################################################################################################################### */
+
+@import "variables";
+
+/* *******************************************************************************************************************
+# Foundation Component Rules
+******************************************************************************************************************* */
+
+    @import "lib/components/Paginator";
+
+    @import "lib/components/Nav--post";
+
+    @import "lib/components/Post";
+
+    @import "lib/components/Post--summary";
+
+/* *******************************************************************************************************************
+# Site-Specific Component Rules
+******************************************************************************************************************* */
+
+  /* -------------------------------------------------------------------------------------------------------------------
+  # Post Component Overrides
+  ------------------------------------------------------------------------------------------------------------------- */
+    .Post-author,
+    .Post-date { white-space: nowrap; }
+
+  /* -------------------------------------------------------------------------------------------------------------------
+  # Post--summary Component Overrides
+  ------------------------------------------------------------------------------------------------------------------- */
+
+    .Post--summary { margin-bottom: $margin-tb; padding: $padding; background: #F6F6F6; border: 1px solid #CCC; border-radius: $border-radius; }
+    .Post--summary .Post-bd p:first-child { margin-top: $margin-tb; }
+    .Post--summary .Post-bd p:last-child { margin-bottom: 0; }
+    .Post--summary .Post-title { margin: 0; }

@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+{% capture header %}
+  <hgroup>
+    <h2>{{ page.title }}</h2>
+    <h4><small>{{ page.author }}</small> <small>&bull;</small> <small>{{ page.date | date: "%F" }}</small></h4>
+  </hgroup>
+{% endcapture %}
+
+{% capture body %}
+<section class="Post">
+  <main class="Post-bd">
+    <article>
+{{ content }}
+    </article>
+  </main>
+</section>
+{% endcapture %}
+
+{% capture footer %}
+  <hr>
+  <div class="Toolbar" role="toolbar">
+    {% include Nav--post.html %}
+  </div>
+{% endcapture %}
+
+{%include Main.html cls="l-Page--fixedWidth" hd=header bd=body ft=footer %}

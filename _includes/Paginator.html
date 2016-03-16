@@ -1,0 +1,25 @@
+<div class="Paginator  {% if paginator.total_pages == 1 %}is-single{% endif %}">
+  {% if paginator.total_pages > 0 %}
+    <div class="row">
+      <div class="col-xs-4  text-align-left">
+        {% if paginator.previous_page %}
+          <a class="Paginator-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
+        {% else %}
+          <span class="Paginator-prev  has-none">Previous</span>
+        {% endif %}
+      </div>
+      <div class="col-xs-4  center  nowrap">
+        <span class="Paginator-nums">Page: <span class="current">{{ paginator.page }}</span> of <span class="total">{{ paginator.total_pages }}</span></span>
+      </div>
+      <div class="col-xs-4  text-align-right">
+        {% if paginator.next_page %}
+          <a class="Paginator-next" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
+        {% else %}
+          <span class="Paginator-next  has-none">Next</span>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <p>No blogs posts yet.</p>
+  {% endif %}
+</div>

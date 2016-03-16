@@ -1,0 +1,29 @@
+
+/* -------------------------------------------------------------------------------------------------------------------
+# Post Component
+
+A `Post` component represents a posted article.
+
+## Markup
+
+<div> class="Post  {property-classes}*"
+  <header> class="Post-hd"
+    <h1|h2|h3|h4|h5|h6>
+      <a> class="Post-title"
+    <p>
+      <span> class="Post-author"
+      <span> class="Post-date"
+  <main> class="Post-bd"
+    <article>
+    <p> class="Post-excerpt"
+
+------------------------------------------------------------------------------------------------------------------- */
+  /* Structural styles: */
+  .Post {}
+  .Post-hd {}
+  .Post-bd {}
+  
+  /* Presentation styles: */
+  .Post {}
+  .Post-hd {}
+  .Post-bd {}
