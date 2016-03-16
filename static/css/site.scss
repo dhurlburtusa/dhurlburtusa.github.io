@@ -70,9 +70,9 @@
 
   /* Override Bootstrap font-size value for html. */
   html { font-size: inherit; }  
-  body { color: #606c71; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+  body { color: #606C71; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
 
-  a { color: #1e6bb8; text-decoration: none; }
+  a { color: #1E6BB8; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
   h1,
@@ -84,11 +84,11 @@
 
   p { margin-bottom: 1em; }
 
-  code { padding: 2px 4px; background-color: #f3f6fa; border-radius: 0.3rem; color: #383e41; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; }
+  code { padding: 2px 4px; background-color: #F3F6FA; border-radius: 0.3rem; color: #383E41; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; }
 
   pre {
     margin-top: 0; margin-bottom: 1rem; padding: 0.8rem;
-    background-color: #f3f6fa; border: solid 1px #dce6f0; border-radius: 0.3rem; color: #567482; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; word-wrap: normal;
+    background-color: #F3F6Fa; border: solid 1px #DCE6F0; border-radius: 0.3rem; color: #567482; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; word-wrap: normal;
   }
   pre > code {
     margin: 0; padding: 0;
@@ -113,7 +113,7 @@
   ul,
   ol { margin-top: 0; }
 
-  blockquote { margin-left: 0; padding: 0 1rem; border-left: 0.3rem solid #dce6f0; color: #819198; }
+  blockquote { margin-left: 0; padding: 0 1rem; border-left: 0.3rem solid #DCE6F0; color: #819198; }
   blockquote > :first-child { margin-top: 0; }
   blockquote > :last-child { margin-bottom: 0; }
 
@@ -123,13 +123,13 @@
   }
   table th { font-weight: bold; }
   table th,
-  table td { padding: 0.5rem 1rem; border: 1px solid #e9ebec; }
+  table td { padding: 0.5rem 1rem; border: 1px solid #E9EBEC; }
 
   dl { padding: 0; }
   dl dt { margin-top: 1rem; padding: 0; font-size: 1rem; font-weight: bold; }
   dl dd { margin-bottom: 1rem; padding: 0; }
 
-  hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #eff0f1; border: 0; }
+  hr { height: 2px; margin: 1rem 0; padding: 0; background-color: #EFF0F1; border: 0; }
 
 /* *******************************************************************************************************************
 # Site-Specific Attribute Style Rules
@@ -155,7 +155,7 @@
   # Site-Specific Page-ft Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-  .Page-ft { margin-top: 1rem; border-top: solid 1px #eff0f1; }
+  .Page-ft { margin-top: 1rem; border-top: solid 1px #EFF0F1; }
 
   .Page-ft-owner { display: block; font-weight: bold; }
 
@@ -226,7 +226,7 @@
   # Site-Specific Masthead Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-  .Masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #fff; }
+  .Masthead-name { margin-top: 0; margin-bottom: 0.1rem; color: #FFF; }
   /* Override Bootstrap values for h1. */
   .Masthead-name { font-weight: bold; line-height: 1.5; }
 
@@ -248,7 +248,7 @@
   The Masthead on the home page.
   ------------------------------------------------------------------------- */
 
-  .Masthead--danHurlburt { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #fff; text-align: center; }
+  .Masthead--danHurlburt { background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); color: #FFF; text-align: center; }
 
   @media screen and (min-width: 64em) {
     .Masthead--danHurlburt { padding: 5rem 6rem; }
@@ -268,4 +268,4 @@
 
   .Menubar { background: #444; }
   .Menubar a { display: block; padding: 0.75rem 1rem; color: white; transition: color 0.2s, background-color 0.2s; }
-  .Menubar a:hover { background: #159957; background: #1e6bb8; text-decoration: none; }
+  .Menubar a:hover { background: #159957; background: #1E6BB8; text-decoration: none; }
