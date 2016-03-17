@@ -23,8 +23,9 @@ link:
     path: /static/css/bootstrap-3.2.0-dist/css/bootstrap.css
   google_fonts_open_sans_400_700:
     href: https://fonts.googleapis.com/css?family=Open+Sans:400,700
-  properties:
-    href: /static/css/properties-1.0.1/properties.css
+  css_properties:
+    base_path: *baseurl
+    path: /static/css/css-properties-1.0.0/properties.css
   site:
     base_path: *baseurl
     path: /static/css/site.css
@@ -62,7 +63,7 @@ defaults:
                 defaults:
                   - google_fonts_open_sans_400_700
                   - bootstrap
-                  - properties
+                  - css_properties
                   - site
   - 
     scope:

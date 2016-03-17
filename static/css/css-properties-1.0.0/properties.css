@@ -1,0 +1,730 @@
+/*
+Version: 1.0.0
+Supported Browsers: IE10+, FireFox, and Chrome.  Most will work with other modern browsers.
+*/
+
+/*
+## Naming Conventions
+
+In general, the following naming convention is used.
+
+{css-property-name}-{css-property-value}
+
+Sometimes, a shorter name will also be associated with the same declaration block.
+
+*/
+
+/*
+#Flexbox Layout Related
+
+Defines behaviour for how flex lines are laid out along the cross-axis. To be set on the flex container as opposed to
+a flex item.
+*/
+.align-content-center {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: center !important;
+    -webkit-align-content: center !important;
+    align-content: center !important;
+}
+.align-content-flex-end {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: end !important;
+    -webkit-align-content: flex-end !important;
+    align-content: flex-end !important;
+}
+.align-content-flex-start {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: start !important;
+    -webkit-align-content: flex-start !important;
+    align-content: flex-start !important;
+}
+.align-content-space-around {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: distribute !important;
+    -webkit-align-content: space-around !important;
+    align-content: space-around !important;
+}
+.align-content-space-between {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: justify !important;
+    -webkit-align-content: space-between !important;
+    align-content: space-between !important;
+}
+.align-content-stretch {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-line-pack: stretch !important;
+    -webkit-align-content: stretch !important;
+    align-content: stretch !important;
+}
+
+
+/*
+#Flexbox Layout Related
+
+Defines behaviour for how flex items are laid out along the cross-axis. To be set on the flex container as opposed to
+a flex item.
+*/
+.align-items-baseline { 
+    -moz-box-align: baseline !important;
+    -webkit-box-align: baseline !important;
+    -ms-flex-align: baseline !important;
+    -webkit-align-items: baseline !important;
+    align-items: baseline !important;
+}
+.align-items-center {
+    -moz-box-align: center !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+}
+.align-items-flex-end {
+    -moz-box-align: end !important;
+    -webkit-box-align: end !important;
+    -ms-flex-align: end !important;
+    -webkit-align-items: flex-end !important;
+    align-items: flex-end !important;
+}
+.align-items-flex-start {
+    -moz-box-align: start !important;
+    -webkit-box-align: start !important;
+    -ms-flex-align: start !important;
+    -webkit-align-items: flex-start !important;
+    align-items: flex-start !important;
+}
+.align-items-stretch {
+    -moz-box-align: stretch !important;
+    -webkit-box-align: stretch !important;
+    -ms-flex-align: stretch !important;
+    -webkit-align-items: stretch !important;
+    align-items: stretch !important;
+}
+
+
+/*
+#Flexbox Layout Related
+
+To be set on the flex item as opposed to a flex container.
+*/
+.align-self-auto {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: auto !important;
+    -webkit-align-self: auto !important;
+    align-self: auto !important;
+}
+.align-self-baseline {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: baseline !important;
+    -webkit-align-self: baseline !important;
+    align-self: baseline !important;
+}
+.align-self-center {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: center !important;
+    -webkit-align-self: center !important;
+    align-self: center !important;
+}
+.align-self-flex-end {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: end !important;
+    -webkit-align-self: flex-end !important;
+    align-self: flex-end !important;
+}
+.align-self-flex-start {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: start !important;
+    -webkit-align-self: flex-start !important;
+    align-self: flex-start !important;
+}
+.align-self-stretch {
+    /*-moz-no-equivalent: no-equivalent !important;*/
+    /*-webkit-no-equivalent: no-equivalent !important;*/
+    -ms-flex-item-align: stretch !important;
+    -webkit-align-self: stretch !important;
+    align-self: stretch !important;
+}
+
+.background-inherit,
+.bg-inherit { background-color: transparent !important; }
+
+/*
+Ensures no background image will exist.
+ */
+.background-image-none,
+.bg-none { background-image: none !important; }
+
+/*
+Ensures the background color is transparent.
+ */
+.background-color-transparent,
+.bg-transparent { background-color: transparent !important; }
+
+
+.borderless { border: 0px !important; }
+
+
+.box-sizing-border-box,
+.border-box { -moz-box-sizing: border-box !important; -webkit-box-sizing: border-box !important; box-sizing: border-box !important; }
+.box-sizing-content-box,
+.content-box { -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important; box-sizing: content-box !important; }
+
+
+.clear-both,
+.clear { clear: both !important; }
+.clear-left { clear: left !important; }
+.clear-none { clear: none !important; }
+.clear-right { clear: right !important; }
+
+
+/*
+The clearfix hack allows the use of floated elements in a container without needing to add presentational markup such
+as <br class="clear"> or something similar to the end of the container markup.
+
+<div class="clearfix">
+    <div class="floated"></div>
+    <div class="floated"></div>
+    <div class="floated"></div>
+    <!-- <br style="clear:both"> not needed. -->
+</div>
+
+http://blog.teamtreehouse.com/a-better-clearfix-with-sass
+http://nicolasgallagher.com/micro-clearfix-hack/
+See stubbornella.org and OOCSS for some other documented examples of clearfixes.
+*/
+.clearfix::before,
+.clearfix::after { content: " " !important; display: table !important; }
+.clearfix::after { clear: both !important; }
+
+
+/* Uncomment the following once it starts to be used.
+.cursor-all-scroll,
+.cur-all-scroll { cursor: all-scroll !important; }
+.cursor-auto,
+.cur-auto { cursor: auto !important; }
+.cursor-cell,
+.cur-cell { cursor: cell !important; }
+.cursor-col-resize,
+.cur-col-resize { cursor: col-resize !important; }
+.cursor-context-menu,
+.cur-context-menu { cursor: context-menu !important; }
+.cursor-copy,
+.cur-copy { cursor: copy !important; }
+.cursor-crosshair,
+.cur-crosshair { cursor: crosshair !important; }
+.cursor-default,
+.cur-default { cursor: default !important; }
+.cursor-e-resize,
+.cur-e-resize { cursor: e-resize !important; }
+.cursor-ew-resize,
+.cur-ew-resize { cursor: ew-resize !important; }
+.cursor-help,
+.cur-help { cursor: help !important; }
+.cursor-move,
+.cur-move { cursor: move !important; }
+.cursor-n-resize,
+.cur-n-resize { cursor: n-resize !important; }
+.cursor-ne-resize,
+.cur-ne-resize { cursor: ne-resize !important; }
+.cursor-nesw-resize,
+.cur-nesw-resize { cursor: nesw-resize !important; }
+.cursor-ns-resize,
+.cur-ns-resize { cursor: ns-resize !important; }
+.cursor-nw-resize,
+.cur-nw-resize { cursor: nw-resize !important; }
+.cursor-nwse-resize,
+.cur-nwse-resize { cursor: nwse-resize !important; }
+.cursor-no-drop,
+.cur-no-drop { cursor: no-drop !important; }
+.cursor-none,
+.cur-none { cursor: none !important; }
+.cursor-not-allowed,
+.cur-not-allowed { cursor: not-allowed !important; }
+.cursor-pointer,
+.cur-pointer { cursor: pointer !important; }
+.cursor-progress,
+.cur-progress { cursor: progress !important; }
+.cursor-row-resize,
+.cur-row-resize { cursor: row-resize !important; }
+.cursor-s-resize,
+.cur-s-resize { cursor: s-resize !important; }
+.cursor-se-resize,
+.cur-se-resize { cursor: se-resize !important; }
+.cursor-sw-resize,
+.cur-sw-resize { cursor: sw-resize !important; }
+.cursor-text,
+.cur-text { cursor: text !important; }
+.cursor-vertical-text,
+.cur-vertical-text { cursor: vertical-text !important; }
+.cursor-w-resize,
+.cur-w-resize { cursor: w-resize !important; }
+.cursor-wait,
+.cur-wait { cursor: wait !important; }
+.cursor-zoom-in,
+.cur-zoom-in { cursor: zoom-in !important; }
+.cursor-zoom-out,
+.cur-zoom-out { cursor: zoom-out !important; }
+*/
+
+.display-block,
+.block { display: block !important; }
+
+/*
+#Flexbox Layout Related
+
+http://dev.opera.com/articles/advanced-cross-browser-flexbox/ recommends using the following for x-browser:
+display: -ms-flexbox; // IE10 likes this one.
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex; // IE10 doesn't seem to recognize.
+display: flex;
+*/
+.display-flex {
+    display: -moz-box !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+}
+
+/* Uncomment the following once it starts to be used.
+.display-grid { display: -ms-grid !important; display: grid !important; }
+*/
+
+.display-inline,
+.inline { display: inline !important; }
+table.display-inline,
+table.inline { display: inline-table !important; }
+
+.display-inline-block,
+.inline-block { display: inline-block !important; }
+
+/*
+#Flexbox Layout Related
+*/
+.display-inline-flex {
+    display: -moz-inline-box !important;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+}
+
+/*
+Why use `hidden` class with `display` instead of `visibility`. The `display` property is typically what is changed
+when one wants something to be hidden. That is, it was chosen because it is the most natural. Also, it matches the
+behavior of the HTML5 hidden attribute. It is rare when one wants to set `visibility` to `hidden`. Use the
+`invisible` class for that.
+*/
+.display-none,
+.print-only,
+.hidden,
+[hidden] { display: none !important; }
+
+/*
+#Flexbox Layout Related
+*/
+.flex-direction-column {
+    -moz-box-direction: normal !important;
+    -moz-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-box-orient: vertical !important;
+    -ms-flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+}
+.flex-direction-column-reverse {
+    -moz-box-direction: reverse !important;
+    -moz-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+    -webkit-box-orient: vertical !important;
+    -ms-flex-direction: column-reverse !important;
+    -webkit-flex-direction: column-reverse !important;
+    flex-direction: column-reverse !important;
+}
+.flex-direction-row {
+    -moz-box-direction: normal !important;
+    -moz-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -webkit-box-orient: horizontal !important;
+    -ms-flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
+}
+.flex-direction-row-reverse {
+    -moz-box-direction: reverse !important;
+    -moz-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    -webkit-box-orient: horizontal !important;
+    -ms-flex-direction: row-reverse !important;
+    -webkit-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+}
+
+
+/*
+#Flexbox Layout Related
+*/
+.flex-flow-column,
+.flex-flow-column-nowrap { -ms-flex-direction: column !important; flex-direction: column !important; -ms-flex-wrap: none !important; flex-wrap: nowrap !important; }
+.flex-flow-column-wrap { -ms-flex-direction: column !important; flex-direction: column !important; -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+.flex-flow-column-wrap-reverse { -ms-flex-direction: column !important; flex-direction: column !important; -ms-flex-wrap: wrap-reverse !important; flex-wrap: wrap-reverse !important; }
+.flex-flow-column-reverse,
+.flex-flow-column-reverse-nowrap { -ms-flex-direction: column-reverse !important; flex-direction: column-reverse !important; -ms-flex-wrap: none !important; flex-wrap: nowrap !important; }
+.flex-flow-column-reverse-wrap { -ms-flex-direction: column-reverse !important; flex-direction: column-reverse !important; -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+.flex-flow-column-reverse-wrap-reverse { -ms-flex-direction: column-reverse !important; flex-direction: column-reverse !important; -ms-flex-wrap: wrap-reverse !important; flex-wrap: wrap-reverse !important; }
+.flex-flow,
+.flex-flow-row,
+.flex-flow-row-nowrap { -ms-flex-direction: row !important; flex-direction: row !important; -ms-flex-wrap: none !important; flex-wrap: nowrap !important; }
+.flex-flow-row-wrap { -ms-flex-direction: row !important; flex-direction: row !important; -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+.flex-flow-row-wrap-reverse { -ms-flex-direction: row !important; flex-direction: row !important; -ms-flex-wrap: wrap-reverse !important; flex-wrap: wrap-reverse !important; }
+.flex-flow-row-reverse,
+.flex-flow-row-reverse-nowrap { -ms-flex-direction: row-reverse !important; flex-direction: row-reverse !important; -ms-flex-wrap: none !important; flex-wrap: nowrap !important; }
+.flex-flow-row-reverse-wrap { -ms-flex-direction: row-reverse !important; flex-direction: row-reverse !important; -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+.flex-flow-row-reverse-wrap-reverse { -ms-flex-direction: row-reverse !important; flex-direction: row-reverse !important; -ms-flex-wrap: wrap-reverse !important; flex-wrap: wrap-reverse !important; }
+
+
+/*
+#Flexbox Layout Related
+*/
+.flex-wrap-nowrap {
+    /*-moz-box-lines: single !important;*/
+    /*-webkit-box-lines: single !important;*/
+    -ms-flex-wrap: nowrap !important;
+    -webkit-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+}
+.flex-wrap-wrap {
+    /*-moz-box-lines: multiple !important;*/
+    /*-webkit-box-lines: multiple !important;*/
+    -ms-flex-wrap: wrap !important;
+    -webkit-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+}
+.flex-wrap-wrap-reverse {
+    /*-moz-box-lines: no-equivalent !important;*/
+    /*-webkit-box-lines: no-equivalent !important;*/
+    -ms-flex-wrap: wrap-reverse !important;
+    -webkit-flex-wrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
+}
+
+
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.float-none { float: none !important; }
+
+
+.font-style-italic,
+.italic { font-style: italic !important; }
+.font-style-normal,
+.normal { font-style: normal !important; }
+.font-style-oblique,
+.oblique { font-style: oblique !important; }
+
+
+.font-variant-normal { font-variant: normal !important; }
+.font-variant-small-caps { font-variant: small-caps !important; }
+
+
+.font-weight-normal { font-weight: normal !important; }
+.font-weight-bold,
+.bold { font-weight: bold !important; }
+.font-weight-bolder,
+.bolder { font-weight: bolder !important; }
+.font-weight-lighter,
+.lighter { font-weight: lighter !important; }
+
+
+.height-auto { height: auto !important; }
+.height-full { height: 100% !important; }
+
+
+/*
+#Flexbox Layout Related
+
+Defines behaviour for how flex items are laid out along the main-axis. To be set on the flex container as opposed to
+a flex item.
+*/
+.justify-content-center {
+    -moz-box-pack: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+}
+.justify-content-flex-end {
+    -moz-box-pack: end !important;
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    -webkit-justify-content: flex-end !important;
+    justify-content: flex-end !important;
+}
+.justify-content-flex-start {
+    -moz-box-pack: start !important;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    justify-content: flex-start !important;
+}
+.justify-content-space-around {
+    /*-moz-box-pack: no-equivalent !important;*/
+    /*-webkit-box-pack: no-equivalent !important;*/
+    -ms-flex-pack: distribute !important;
+    -webkit-justify-content: space-around !important;
+    justify-content: space-around !important;
+}
+.justify-content-space-between {
+    -moz-box-pack: justify !important;
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    -webkit-justify-content: space-between !important;
+    justify-content: space-between !important;
+}
+
+
+.letter-spacing-normal { letter-spacing: normal !important; }
+
+
+.margin-none { margin: 0 !important; }
+
+
+.opacity-100,
+.opaque { opacity: 1 !important; }
+.opacity-90 { opacity: .9 !important; }
+.opacity-80 { opacity: .8 !important; }
+.opacity-70 { opacity: .7 !important; }
+.opacity-60 { opacity: .6 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-40 { opacity: .4 !important; }
+.opacity-30 { opacity: .3 !important; }
+.opacity-20 { opacity: .2 !important; }
+.opacity-10 { opacity: .1 !important; }
+.opacity-0 { opacity: 0 !important; }
+
+
+.outline-none { outline: none !important; }
+
+
+.overflow-auto { overflow: auto !important; }
+.overflow-hidden { overflow: hidden !important; }
+.overflow-scroll { overflow: scroll !important; }
+.overflow-visible { overflow: visible !important; }
+
+.overflow-x-auto { overflow-x: auto !important; }
+.overflow-x-hidden { overflow-x: hidden !important; }
+.overflow-x-scroll { overflow-x: scroll !important; }
+.overflow-x-visible { overflow-x: visible !important; }
+
+.overflow-y-auto { overflow-y: auto !important; }
+.overflow-y-hidden { overflow-y: hidden !important; }
+.overflow-y-scroll { overflow-y: scroll !important; }
+.overflow-y-visible { overflow-y: visible !important; }
+
+
+.padless,
+.padding-none { padding: 0 !important; }
+
+
+.position-absolute { position: absolute !important; }
+.position-fixed,
+.fixed { position: fixed !important; }
+.position-relative { position: relative !important; }
+.position-static { position: static !important; }
+
+
+/*
+TODO: Document which browsers support this.
+*/
+/* Uncomment the following once it starts to be used.
+.resize-both,
+.resize { resize: both !important; }
+.resize-none,
+.resize-n { resize: none !important; }
+.resize-horizontal,
+.resize-h { resize: horizontal !important; }
+.resize-vertical,
+.resize-v { resize: vertical !important; }
+*/
+
+
+/* Uncomment the following once it starts to be used.
+.table-layout-auto { table-layout: auto !important; }
+.table-layout-fixed { table-layout: fixed !important; }
+*/
+
+
+.text-align-center,
+.center { text-align: center !important; }
+.text-align-justify,
+.justify { text-align: justify !important; }
+.text-align-left,
+.left { text-align: left !important; }
+.text-align-right,
+.right { text-align: right !important; }
+
+
+.text-overflow-clip { text-overflow: clip !important; }
+.text-overflow-ellipsis,
+.ellipsis { text-overflow: ellipsis !important; }
+
+
+.text-decoration-line-through,
+.strike,
+.lined-through { text-decoration: line-through !important; }
+.text-decoration-none { text-decoration: none !important; }
+.text-decoration-overline,
+.overlined { text-decoration: overline !important; }
+.text-decoration-underline,
+.underlined { text-decoration: underline !important; }
+.text-decoration-overline-underline,
+.overlined-underlined { text-decoration: overline underline !important; }
+
+
+/* Use the following instead of Bootstrap's .text-capitalize. Theirs is not declared important. */
+.text-transform-capitalize,
+.capitalized { text-transform: capitalize !important; }
+/* Use the following instead of Bootstrap's .text-lowercase. Theirs is not declared important. */
+.text-transform-lowercase,
+.lowercased { text-transform: lowercase !important; }
+.text-transform-none { text-transform: none !important; }
+/* Use the following instead of Bootstrap's .text-uppercase. Theirs is not declared important. */
+.text-transform-uppercase,
+.uppercased { text-transform: uppercase !important; }
+
+
+/* Uncomment the following once it starts to be used.
+.rotate-45 { -ms-transform: rotate(45deg) !important; -webkit-transform: rotate(45deg) !important; transform: rotate(45deg) !important; }
+.rotate-90 { -ms-transform: rotate(90deg) !important; -webkit-transform: rotate(90deg) !important; transform: rotate(90deg) !important; }
+.rotate-135 { -ms-transform: rotate(135deg) !important; -webkit-transform: rotate(135deg) !important; transform: rotate(135deg) !important; }
+.rotate-180 { -ms-transform: rotate(180deg) !important; -webkit-transform: rotate(180deg) !important; transform: rotate(180deg) !important; }
+.rotate-270 { -ms-transform: rotate(270deg) !important; -webkit-transform: rotate(270deg) !important; transform: rotate(270deg) !important; }
+*/
+
+
+.vertical-align-baseline,
+.valign-baseline { vertical-align: baseline !important; }
+.vertical-align-bottom,
+.valign-bottom { vertical-align: bottom !important; }
+.vertical-align-middle,
+.valign-middle { vertical-align: middle !important; }
+.vertical-align-sub,
+.valign-sub { vertical-align: sub !important; }
+.vertical-align-super,
+.valign-super { vertical-align: super !important; }
+.vertical-align-text-bottom,
+.valign-text-bottom { vertical-align: text-bottom !important; }
+.vertical-align-text-top,
+.valign-text-top { vertical-align: text-top !important; }
+.vertical-align-top,
+.valign-top { vertical-align: top !important; }
+
+
+.visibility-hidden,
+.vis-hidden,
+.invisible { visibility: hidden !important; }
+.visibility-collapse,
+.vis-collapse { visibility: collapse !important; }
+/*
+.visibility-visible,
+.vis-visible,
+.is-visible,
+.visible { visibility: visible !important; }
+*/
+
+
+/* Uncomment the following once it starts to be used.
+.user-input-enabled { -webkit-user-input: enabled !important; -khtml-user-input: enabled !important; -moz-user-input: enabled !important; -o-user-input: enabled !important; user-input: enabled !important; }
+.user-input-disabled { -webkit-user-input: disabled !important; -khtml-user-input: disabled !important; -moz-user-input: disabled !important; -o-user-input: disabled !important; user-input: disabled !important; }
+.user-input-none { -webkit-user-input: none !important; -khtml-user-input: none !important; -moz-user-input: none !important; -o-user-input: none !important; user-input: none !important; }
+*/
+
+
+/* Uncomment the following once it starts to be used.
+.user-select-none { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; -o-user-select: none !important; user-select: none !important; cursor: default !important; }
+.user-select-text { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; -o-user-select: text !important; user-select: text !important; }
+*/
+
+
+.white-space-normal,
+.ws-normal { white-space: normal !important; }
+.white-space-nowrap,
+.ws-nowrap,
+.nowrap { white-space: nowrap !important; }
+.white-space-pre,
+.ws-pre,
+.pre { white-space: pre !important; }
+.white-space-pre-line,
+.ws-pre-line,
+.pre-line { white-space: pre-line !important; }
+.white-space-pre-wrap,
+.ws-pre-wrap,
+.pre-wrap { white-space: pre-wrap !important; }
+
+
+.width-auto { width: auto !important; }
+.width-half { width: 50% !important; }
+.width-full { width: 100% !important; }
+
+
+.word-break-break-all { word-break: break-all !important; }
+.word-break-normal { word-break: normal !important; }
+.word-break-keep-all { word-break: keep-all !important; }
+
+
+.word-spacing-normal { word-spacing: normal !important; }
+
+
+.word-wrap-normal { word-wrap: normal !important; }
+.word-wrap-break-word { word-wrap: break-word !important; }
+
+
+/*
+ * An imperceptible element is one that can't be perceived. It is not only invisible but also takes up no space. If
+ * it took up any space, then it could potentially be perceived by the fact that surrounding elements would be in a
+ * different position than they would be otherwise.
+ * 
+ * We don't ever what to add visibility: hidden to the imperceptible class. Yes, it would make it invisible. However,
+ * when visibility: hidden is used on a submit button, some browsers treat the submit button as if it were
+ * non-existent. Similarly with display: none.
+ * 
+ * The original use case: "Wanted a form to be submitted when the user pressed Enter but didn't want the submit button
+ * to be displayed."
+ */
+.imperceptible { display: block !important; width: 0 !important; height: 0 !important; margin: 0 !important; padding: 0 !important; border: 0  !important; }
+
+@media print {
+
+    .page-break-after-always { page-break-after: always !important; }
+    .page-break-after-auto { page-break-after: auto !important; }
+    .page-break-after-avoid { page-break-after: avoid !important; }
+    .page-break-after-left { page-break-after: left !important; }
+    .page-break-after-right { page-break-after: right !important; }
+
+
+    .page-break-before-always { page-break-before: always !important; }
+    .page-break-before-auto { page-break-before: auto !important; }
+    .page-break-before-avoid { page-break-before: avoid !important; }
+    .page-break-before-left { page-break-before: left !important; }
+    .page-break-before-right { page-break-before: right !important; }
+
+
+    .page-break-inside-auto { page-break-inside: auto !important; }
+    .page-break-inside-avoid { page-break-inside: avoid !important; }
+
+
+    .print-hide { visibility: hidden !important; }
+    .print-none, .noprint { display: none !important; }
+    .print-only { display: initial !important; display: inherit !important; }
+
+} /* eo @media print */
