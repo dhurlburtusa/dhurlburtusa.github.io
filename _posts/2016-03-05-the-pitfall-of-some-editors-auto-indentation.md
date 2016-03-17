@@ -74,15 +74,12 @@ do_it(argument1, argument2, argument3, argument4,
     argument5)
 {% endhighlight %}
 
-<p>
-  For me, this predictability makes reading and comprehending the code easier and I am not slowed down my the
-  unexpected.
-</p>
-<p>
-  Recall that the indentation depends on the length of the function name.  Now see what happens when functions
-  with different length names are called.  See how the wrapped arguments are at different indentation-levels.  When
-  reading, your eyes have to adjust for this unpredictable nature.
-</p>
+For me, this predictability makes reading and comprehending the code easier and I am not slowed down by the
+unexpected.
+
+Recall that the indentation depends on the length of the function name.  Now see what happens when functions
+with different length names are called.  See how the wrapped arguments are at different indentation-levels.  When
+reading, your eyes have to adjust for this unpredictable nature.
 
 {% highlight python linenos %}
 def do_something(param1, param2, param3, param4, param5)
@@ -98,10 +95,8 @@ do_something_else(argument1, argument2, argument3, argument4,
                   argument5)
 {% endhighlight %}
 
-<p>
-  When the code is **predictable**, it is easier to read.  See the figure below.  Compare it with the figure above.
-  For some people, the difference may be insignificant.  For others, it is a hindrance.
-</p>
+When the code is **predictable**, it is easier to read.  See the figure below.  Compare it with the figure above.
+For some people, the difference may be insignificant.  For others, it is a hindrance.
 
 {% highlight python linenos %}
 def do_something(param1, param2, param3, param4, param5)
@@ -117,6 +112,14 @@ do_something_else(argument1, argument2, argument3, argument4,
     argument5)
 {% endhighlight %}
 
-I recommend the **predictable** style of indentation.  Code is easier to read, interpret, and comprehend when the
-format is predictable.  When the format is predictable, more brain power can be focused on the meat of the code, and
+## Summary
+
+I recommend the **predictable** style of indentation.  Code is
+
+* easier to read
+* easier to interpret
+* easier to comprehend
+* resilient to refactoring
+
+when the format is predictable.  When the format is predictable, more brain power can be focused on the meat of the code, and
 less brain power is used to parse what is being read.
