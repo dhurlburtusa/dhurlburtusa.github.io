@@ -5,13 +5,13 @@
 ## Markup
 
 <div> class="Nav  Nav--post  is-single?  {property-classes}*"
-  <a|span> class="Nav--post-prev  has-none?  {property-classes}*"
-  <a|span> class="Nav--post-next  has-none?  {property-classes}*"
+  <a|span> class="Nav--post-prev  {property-classes}*" disabled?
+  <a|span> class="Nav--post-next  {property-classes}*" disabled?
 ------------------------------------------------------------------------------------------------------------------- */
   /* Structural styles: */
   
   /* Presentation styles: */
   .Nav--post.is-single { display: none; }
 
-  .Nav--post-next.has-none,
-  .Nav--post-prev.has-none { opacity: 0.75; }
+  .Nav--post-next[disabled],
+  .Nav--post-prev[disabled] { opacity: 0.75; }

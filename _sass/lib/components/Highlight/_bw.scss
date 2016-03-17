@@ -1,0 +1,102 @@
+.highlight {}
+
+/* Comment: */
+.highlight .c   { font-style: italic } /* Comment */
+.highlight .cm  { font-style: italic } /* Comment.Multiline */
+.highlight .cp  {} /* Comment.Preproc */
+.highlight .c1  { font-style: italic } /* Comment.Single */
+.highlight .cs  { font-style: italic } /* Comment.Special */
+
+/* Error: */
+.highlight .err { border: 1px solid #F00 } /* Error */
+
+/* Generic: */
+.highlight .g   {} /* Generic */
+.highlight .gd  {} /* Generic.Deleted */
+.highlight .ge  { font-style: italic } /* Generic.Emph */
+.highlight .gr  {} /* Generic.Error */
+.highlight .gh  { font-weight: bold } /* Generic.Heading */
+.highlight .gi  {} /* Generic.Inserted */
+.highlight .go  {} /* Generic.Output */
+.highlight .gp  { font-weight: bold } /* Generic.Prompt */
+.highlight .gs  { font-weight: bold } /* Generic.Strong */
+.highlight .gu  { font-weight: bold } /* Generic.Subheading */
+.highlight .gt  {} /* Generic.Traceback */
+
+/* ? */
+.highlight .hll { background-color: #FFC }
+
+/* Keyword: */
+.highlight .k   { font-weight: bold } /* Keyword */
+.highlight .kc  { font-weight: bold } /* Keyword.Constant */
+.highlight .kd  { font-weight: bold } /* Keyword.Declaration */
+.highlight .kn  { font-weight: bold } /* Keyword.Namespace */
+.highlight .kp  {} /* Keyword.Pseudo */
+.highlight .kr  { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt  {} /* Keyword.Type */
+
+/* Name: */
+.highlight .n   {} /* Name */
+.highlight .na  {} /* Name.Attribute */
+.highlight .nc  { font-weight: bold } /* Name.Class */
+.highlight .no  {} /* Name.Constant */
+.highlight .nd  {} /* Name.Decorator */
+.highlight .ni  { font-weight: bold } /* Name.Entity */
+.highlight .ne  { font-weight: bold } /* Name.Exception */
+.highlight .nf  {} /* Name.Function */
+.highlight .nl  {} /* Name.Label */
+.highlight .nn  { font-weight: bold } /* Name.Namespace */
+.highlight .nx  {} /* Name.Other */
+.highlight .py  {} /* Name.Property */
+.highlight .nt  { font-weight: bold } /* Name.Tag */
+
+/* Name.Builtin: */
+.highlight .nb  {} /* Name.Builtin */
+.highlight .bp  {} /* Name.Builtin.Pseudo */
+
+/* Name.Variable: */
+.highlight .nv  {} /* Name.Variable */
+.highlight .vc  {} /* Name.Variable.Class */
+.highlight .vg  {} /* Name.Variable.Global */
+.highlight .vi  {} /* Name.Variable.Instance */
+
+/* Literal: */
+.highlight .l   {} /* Literal */
+
+/* Literal.Date: */
+.highlight .ld  {} /* Literal.Date */
+
+/* Literal.Number: */
+.highlight .m   {} /* Literal.Number */
+.highlight .mf  {} /* Literal.Number.Float */
+.highlight .mh  {} /* Literal.Number.Hex */
+.highlight .mi  {} /* Literal.Number.Integer */
+.highlight .il  {} /* Literal.Number.Integer.Long */
+.highlight .mo  {} /* Literal.Number.Oct */
+
+/* Literal.String: */
+.highlight .s   { font-style: italic } /* Literal.String */
+.highlight .sb  { font-style: italic } /* Literal.String.Backtick */
+.highlight .sc  { font-style: italic } /* Literal.String.Char */
+.highlight .sd  { font-style: italic } /* Literal.String.Doc */
+.highlight .s2  { font-style: italic } /* Literal.String.Double */
+.highlight .se  { font-weight: bold; font-style: italic } /* Literal.String.Escape */
+.highlight .sh  { font-style: italic } /* Literal.String.Heredoc */
+.highlight .si  { font-weight: bold; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx  { font-style: italic } /* Literal.String.Other */
+.highlight .sr  { font-style: italic } /* Literal.String.Regex */
+.highlight .s1  { font-style: italic } /* Literal.String.Single */
+.highlight .ss  { font-style: italic } /* Literal.String.Symbol */
+
+/* Operator: */
+.highlight .o   {} /* Operator */
+.highlight .ow  { font-weight: bold } /* Operator.Word */
+
+/* Punctuation: */
+.highlight .p   {} /* Punctuation */
+
+/* Text: */
+.highlight .w   {} /* Text.Whitespace */
+
+/* Other: */
+.highlight .x   {} /* Other */

@@ -7,8 +7,9 @@
 * Foundation Element Rules
 * Foundation Utilitiy Rules
   - SEO Related Rules
+* Foundation Layout Rules
+  - Page Layout Rules
 * Foundation Component Rules
-  - Btn Component Rules
   - Menubar Component Rules
 * Site-Specific Element Rules
 * Site-Specific Attribute Rules
@@ -17,13 +18,13 @@
   - Page-hd Rules
   - Page-ft Rules
 * Site-Specific Component Rules
-  - Btn Component Rules
+  - Masthead Component Rules
   - Menubar Component Rules
 
 ################################################################################################################### */
 
 @import "variables";
-border-radius
+
 /* *******************************************************************************************************************
 # Foundation Element Rules
 ******************************************************************************************************************* */
@@ -43,17 +44,14 @@ border-radius
     .seo-only { box-sizing: border-box; height: 4px; margin: 0; padding: 0; padding-top: 4px; overflow: hidden; }
 
 /* *******************************************************************************************************************
-# Foundation Component Rules
+# Foundation Layout Rules
 ******************************************************************************************************************* */
 
     @import "lib/layouts/Page";
 
-  /* -----------------------------------------------------------------------------------------------------------------
-  # Foundation Btn Component Rules
-  ----------------------------------------------------------------------------------------------------------------- */
-
-    .Btn { display: inline-block; }
-
+/* *******************************************************************************************************************
+# Foundation Component Rules
+******************************************************************************************************************* */
 
     @import "lib/components/Menubar";
 
@@ -78,11 +76,11 @@ border-radius
     p { margin-bottom: $margin-tb; }
     p:first-of-type { margin-top: $margin-tb; }
 
-    code { padding: 2px 4px; background-color: #F3F6FA; border-radius: 0.3rem; color: #383E41; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; }
+    code { background-color: #F3F6FA; border-radius: $border-radius; color: #C13C5E; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; }
 
     pre {
       margin-top: 0; margin-bottom: $margin-tb; padding: 0.8rem;
-      background-color: #F3F6Fa; border: solid 1px #DCE6F0; border-radius: 0.3rem; color: #567482; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; word-wrap: normal;
+      background-color: #F3F6Fa; border: solid 1px #DCE6F0; border-radius: $border-radius; color: #567482; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; word-wrap: normal;
     }
     pre > code {
       margin: 0; padding: 0;
@@ -93,7 +91,7 @@ border-radius
     .highlight pre,
     pre {
       padding: 0.8rem; overflow: auto;
-      border-radius: 0.3rem; font-size: 0.9rem; line-height: 1.45;
+      border-radius: $border-radius; font-size: 0.9rem; line-height: 1.45;
     }
     pre code,
     pre tt { display: inline; margin: 0; padding: 0; max-width: initial; overflow: initial;
@@ -115,13 +113,12 @@ border-radius
       display: block; width: 100%; overflow: auto;
       word-break: normal; word-break: keep-all;
     }
-    table th { font-weight: bold; }
     table th,
-    table td { padding: $padding-tb / 2 $padding-lr; border: 1px solid #E9EBEC; }
+    table td { padding: $padding / 2; }
 
     dl { padding: 0; }
-    dl dt { margin-top: $margin-tb; padding: 0; font-size: 1rem; font-weight: bold; }
-    dl dd { margin-bottom: $margin-tb; padding: 0; }
+    dt { font-size: 1rem; font-weight: bold; }
+    dd { margin-bottom: $margin-tb; }
 
     hr { height: 2px; margin: $margin-tb 0; padding: 0; background-color: #EFF0F1; border: 0; }
 
@@ -163,34 +160,22 @@ border-radius
 ******************************************************************************************************************* */
 
   /* -----------------------------------------------------------------------------------------------------------------
-  # Site-Specific Btn Component Rules
+  # Site-Specific Highlight Component Rules
   ----------------------------------------------------------------------------------------------------------------- */
 
-    .Btn {
-      margin-bottom: 1rem;
-      background-color: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    }
-    .Btn + .Btn { margin-left: $margin-tb; }
-
-    .Btn:hover {
-      background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); color: rgba(255, 255, 255, 0.8); text-decoration: none;
-    }
-
-    @media screen and (min-width: 28em) {
-      .Btn { display: block; width: 100%; padding: 0.75rem; font-size: 0.9rem; }
-      .Btn + .Btn { margin-top: $margin-tb; margin-left: 0; }
-    }
-
-    @media screen and (min-width: 40em) {
-      .Btn { padding: 0.6rem 0.9rem; font-size: 0.9rem; }
-    }
-
-    @media screen and (min-width: 52em) {
-    }
-
-    @media screen and (min-width: 64em) {
-      .Btn { padding: 0.75rem 1rem; }
-    }
+    @import "lib/components/Highlight/pastie";
+    .highlight { background: #F6F6F6; border: 1px solid #CCC; border-left: $border-radius solid #428BCA; border-radius: $border-radius; }
+    .highlight code { display: block; }
+    .highlight pre,
+    .highlight ol,
+    .highlight ul { margin-bottom: 0; border: 0; }
+    .highlight ol,
+    .highlight ul { padding-left: 30px; }
+    .highlight > pre { border-radius: 0 $border-radius $border-radius 0; }
+    .highlight .lineno { padding-left: 0; padding-right: 0; }
+    .highlight .code {}
+    .highlight .gutter pre,
+    .highlight .code pre { padding-top: 0; padding-bottom: 0; }
 
   /* -----------------------------------------------------------------------------------------------------------------
   # Site-Specific Masthead Component Rules

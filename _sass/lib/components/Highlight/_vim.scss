@@ -1,0 +1,102 @@
+.highlight {}
+
+/* Comment: */
+.highlight .c   { color: #000080 } /* Comment */
+.highlight .cm  { color: #000080 } /* Comment.Multiline */
+.highlight .cp  { color: #000080 } /* Comment.Preproc */
+.highlight .c1  { color: #000080 } /* Comment.Single */
+.highlight .cs  { color: #CD0000; font-weight: bold } /* Comment.Special */
+
+/* Error: */
+.highlight .err { color: #CCC; border: 1px solid #F00 } /* Error */
+
+/* Generic: */
+.highlight .g   { color: #CCC } /* Generic */
+.highlight .gd  { color: #CD0000 } /* Generic.Deleted */
+.highlight .ge  { color: #CCC; font-style: italic } /* Generic.Emph */
+.highlight .gr  { color: #F00 } /* Generic.Error */
+.highlight .gh  { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi  { color: #00CD00 } /* Generic.Inserted */
+.highlight .go  { color: #808080 } /* Generic.Output */
+.highlight .gp  { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs  { color: #CCC; font-weight: bold } /* Generic.Strong */
+.highlight .gu  { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt  { color: #0040D0 } /* Generic.Traceback */
+
+/* ? */
+.highlight .hll { background-color: #222 }
+
+/* Keyword: */
+.highlight .k   { color: #CDCD00 } /* Keyword */
+.highlight .kc  { color: #CDCD00 } /* Keyword.Constant */
+.highlight .kd  { color: #00CD00 } /* Keyword.Declaration */
+.highlight .kn  { color: #CD00CD } /* Keyword.Namespace */
+.highlight .kp  { color: #CDCD00 } /* Keyword.Pseudo */
+.highlight .kr  { color: #CDCD00 } /* Keyword.Reserved */
+.highlight .kt  { color: #00CD00 } /* Keyword.Type */
+
+/* Name: */
+.highlight .n   { color: #CCC } /* Name */
+.highlight .na  { color: #CCC } /* Name.Attribute */
+.highlight .nc  { color: #00CDCD } /* Name.Class */
+.highlight .no  { color: #CCC } /* Name.Constant */
+.highlight .nd  { color: #CCC } /* Name.Decorator */
+.highlight .ni  { color: #CCC } /* Name.Entity */
+.highlight .ne  { color: #669; font-weight: bold } /* Name.Exception */
+.highlight .nf  { color: #CCC } /* Name.Function */
+.highlight .nl  { color: #CCC } /* Name.Label */
+.highlight .nn  { color: #CCC } /* Name.Namespace */
+.highlight .nx  { color: #CCC } /* Name.Other */
+.highlight .py  { color: #CCC } /* Name.Property */
+.highlight .nt  { color: #CCC } /* Name.Tag */
+
+/* Name.Builtin: */
+.highlight .nb  { color: #CD00CD } /* Name.Builtin */
+.highlight .bp  { color: #CD00CD } /* Name.Builtin.Pseudo */
+
+/* Name.Variable: */
+.highlight .nv  { color: #00CDCD } /* Name.Variable */
+.highlight .vc  { color: #00CDCD } /* Name.Variable.Class */
+.highlight .vg  { color: #00CDCD } /* Name.Variable.Global */
+.highlight .vi  { color: #00CDCD } /* Name.Variable.Instance */
+
+/* Literal: */
+.highlight .l   { color: #CCC } /* Literal */
+
+/* Literal.Date: */
+.highlight .ld  { color: #CCC } /* Literal.Date */
+
+/* Literal.Number: */
+.highlight .m   { color: #CD00CD } /* Literal.Number */
+.highlight .mf  { color: #CD00CD } /* Literal.Number.Float */
+.highlight .mh  { color: #CD00CD } /* Literal.Number.Hex */
+.highlight .mi  { color: #CD00CD } /* Literal.Number.Integer */
+.highlight .il  { color: #CD00CD } /* Literal.Number.Integer.Long */
+.highlight .mo  { color: #CD00CD } /* Literal.Number.Oct */
+
+/* Literal.String: */
+.highlight .s   { color: #CD0000 } /* Literal.String */
+.highlight .sb  { color: #CD0000 } /* Literal.String.Backtick */
+.highlight .sc  { color: #CD0000 } /* Literal.String.Char */
+.highlight .sd  { color: #CD0000 } /* Literal.String.Doc */
+.highlight .s2  { color: #CD0000 } /* Literal.String.Double */
+.highlight .se  { color: #CD0000 } /* Literal.String.Escape */
+.highlight .sh  { color: #CD0000 } /* Literal.String.Heredoc */
+.highlight .si  { color: #CD0000 } /* Literal.String.Interpol */
+.highlight .sx  { color: #CD0000 } /* Literal.String.Other */
+.highlight .sr  { color: #CD0000 } /* Literal.String.Regex */
+.highlight .s1  { color: #CD0000 } /* Literal.String.Single */
+.highlight .ss  { color: #CD0000 } /* Literal.String.Symbol */
+
+/* Operator: */
+.highlight .o   { color: #39C } /* Operator */
+.highlight .ow  { color: #CDCD00 } /* Operator.Word */
+
+/* Punctuation: */
+.highlight .p   { color: #CCC } /* Punctuation */
+
+/* Text: */
+.highlight .w   { color: #CCC } /* Text.Whitespace */
+
+/* Other: */
+.highlight .x   { color: #CCC } /* Other */

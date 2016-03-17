@@ -5,16 +5,16 @@
 ## Markup
 
 <div> class="Paginator  is-single?  {property-classes}*"
-  <a|span> class="Paginator-prev  has-none?  {property-classes}*"
+  <a|span> class="Paginator-prev  {property-classes}*" disabled?
   <span> class="Paginator-nums">
     <span> class="current"
     <span> class="total"
-  <a|span> class="Paginator-next  has-none?"
+  <a|span> class="Paginator-next" disabled?
 ------------------------------------------------------------------------------------------------------------------- */
   /* Structural styles: */
   
   /* Presentation styles: */
   .Paginator.is-single { display: none; }
 
-  .Paginator-next.has-none,
-  .Paginator-prev.has-none { opacity: 0.75; }
+  .Paginator-next[disabled],
+  .Paginator-prev[disabled] { opacity: 0.75; }
