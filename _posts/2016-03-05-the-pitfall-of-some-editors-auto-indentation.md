@@ -5,7 +5,7 @@ doc:
   html:
     head:
       cls: no-js  Doc  Doc--blog  Doc--blog--thePitfallOfSomeEditorsAutoIndentation
-      title: The Pitfall of Some Editor's Auto Indentation - Blog - WTF
+      title: The Pitfall of Some Editor's Auto Indentation - Blog - DH
 
 author: Danny Hurlburt
 date: 2016-03-05 08:28:00 -0700

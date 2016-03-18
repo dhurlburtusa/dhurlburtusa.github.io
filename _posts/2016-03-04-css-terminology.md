@@ -5,7 +5,7 @@ doc:
   html:
     head:
       cls: no-js  Doc  Doc--blog  Doc--blog--cssTerminology
-      title: CSS Terminology - Blog - WTF
+      title: CSS Terminology - Blog - DH
       style: |
         <style>
           .BNF { padding: 1rem; }
