@@ -47,6 +47,9 @@ script:
   angular_animate:
     base_path: *baseurl
     path: /static/js/angular-1.5.2/angular-animate.min.js
+  angular_resource:
+    base_path: *baseurl
+    path: /static/js/angular-1.5.2/angular-resource.min.js
   angular_sanitize:
     base_path: *baseurl
     path: /static/js/angular-1.5.2/angular-sanitize.min.js
@@ -107,4 +110,5 @@ defaults:
             scripts:
               - angular
               - angular_animate
+              - angular_resource
               - angular_sanitize

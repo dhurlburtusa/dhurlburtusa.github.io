@@ -33,14 +33,28 @@ doc:
           (function (GBL) {
             var module = angular.module("PostsModule", [
                 "ngAnimate",
+                "ngResource",
                 // Needed for ng-bind-html.
                 "ngSanitize"
               ]
             );
 
+            module.factory('PostRepo', [
+                '$resource',
+                function ($resource) {
+                  return $resource(
+                    DH.cfg.site.baseurl + '/static/data/posts/:postId.json',
+                    {}, {
+                      query: { method: 'GET', isArray: true, cache: true }
+                    }
+                  );
+                }
+              ]
+            );
+
             module.controller("PostsCtrl", [
-                "$scope", "$http",
-                function ($scope, $http) {
+                "$scope", "PostRepo",
+                function ($scope, PostRepo) {
                   var onError, onSuccess, request;
 
                   $scope.find = {
@@ -49,12 +63,7 @@ doc:
                   };
                   $scope.status = "loading";
 
-                  onSuccess = function (response) {
-                    var data, posts;
-
-                    data = response.data;
-                    posts = data.posts;
-
+                  onSuccess = function (posts) {
                     posts.forEach(function (post, idx, posts) {
                       post.date = GBL.toDate(post.date);
                     });
@@ -66,8 +75,7 @@ doc:
                     $scope.status = "loaded";
                     $scope.posts = [];
                   };
-                  request = $http.get(DH.cfg.site.baseurl + '/static/data/posts.json');
-                  request.then(onSuccess, onError);
+                  PostRepo.query(onSuccess, onError);
                 }
               ]
             );
