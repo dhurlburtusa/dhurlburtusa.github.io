@@ -37,6 +37,19 @@
     <script src="{{ script.src }}{{ script.base_path }}{{ script.path }}"{%if script.type %} type="script.type"{% endif %}></script>
   {% endif %}
 {% endfor %}
+<script>
+  (function (GBL) {
+    var DH;
+
+    DH = GBL.DH = {};
+
+    DH.cfg = {
+      site: {
+        baseurl: "{{ site.baseurl }}"
+      }
+    };
+  })(this);
+</script>
 {{ page.doc.html.body.script }}
 </body>
 </html>

@@ -13,6 +13,7 @@
 * Foundation Layout Rules
   - Page Layout Rules
 * Foundation Component Rules
+  - Mask Component Rules
   - Menubar Component Rules
 * Site-Specific Element Rules
 * Site-Specific Attribute Rules
@@ -56,6 +57,7 @@
 # Foundation Component Rules
 ******************************************************************************************************************* */
 
+    @import "lib/components/Mask";
     @import "lib/components/Menubar";
 
 /* *******************************************************************************************************************
@@ -225,6 +227,14 @@
     @media screen and (min-width: 64em) {
       .Masthead--danHurlburt { padding-top: 4rem; padding-bottom: 4em; }
     }
+
+  /* -----------------------------------------------------------------------------------------------------------------
+  # Site-Specific Mask Component Rules
+  ----------------------------------------------------------------------------------------------------------------- */
+
+  .Mask { background: #F6F6F6; border: 1px solid #CCC; border-radius: $border-radius; opacity: 0.8; }
+
+  .Mask-msg { margin: 0 auto; width: 100%; top: 50%; margin-top: -0.5rem; font-weight: bold; text-align: center; }
 
   /* -----------------------------------------------------------------------------------------------------------------
   # Site-Specific Menubar Component Rules

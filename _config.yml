@@ -15,6 +15,9 @@ exclude:
 gems: [jekyll-paginate]
 
 link:
+  angular_csp:
+    base_path: *baseurl
+    path: /static/js/angular-1.5.2/angular-csp.css
   blog:
     base_path: *baseurl
     path: /static/css/blog.css
@@ -36,6 +39,17 @@ paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title/
 
 excerpt_separator: <!-- stop excerpt -->
+
+script:
+  angular:
+    base_path: *baseurl
+    path: /static/js/angular-1.5.2/angular.min.js
+  angular_animate:
+    base_path: *baseurl
+    path: /static/js/angular-1.5.2/angular-animate.min.js
+  angular_sanitize:
+    base_path: *baseurl
+    path: /static/js/angular-1.5.2/angular-sanitize.min.js
 
 timezone: America/Denver
 
@@ -76,3 +90,21 @@ defaults:
               stylesheets:
                 extras:
                   - blog
+  - 
+    scope:
+      path: blog
+      type: pages
+    values:
+      doc:
+        html:
+          head:
+            link:
+              stylesheets:
+                extras:
+                  - angular_csp
+                  - blog
+          body:
+            scripts:
+              - angular
+              - angular_animate
+              - angular_sanitize

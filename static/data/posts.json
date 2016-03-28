@@ -1,0 +1,25 @@
+---
+# This Front Matter is necessary to get Jekyll to process this JSON file.
+
+# 
+---
+)]}',
+{
+  "posts": [
+    {% for post in site.posts %}
+      {% unless post.draft %}
+        {
+          "author": {{ post.author | jsonify }},
+          "categories":  {{ post.categories | jsonify }},
+          "collection": {{ post.collection | jsonify }},
+          "date":  {{ post.date | jsonify }},
+          "draft":  {{ post.draft | jsonify }},
+          "excerpt": {{ post.excerpt | jsonify | replace: "\n", " " }},
+          "tags":  {{ post.tags | jsonify }},
+          "title": {{ post.title | jsonify }},
+          "url": {{ post.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endunless %}
+    {% endfor %}
+  ]
+}

@@ -14,8 +14,6 @@ Theses are the blog styles that override or augment the site styles.
 # Foundation Component Rules
 ******************************************************************************************************************* */
 
-    @import "lib/components/Paginator";
-
     @import "lib/components/Nav--post";
 
     @import "lib/components/Post";
@@ -27,10 +25,48 @@ Theses are the blog styles that override or augment the site styles.
 ******************************************************************************************************************* */
 
   /* -------------------------------------------------------------------------------------------------------------------
+  # Posts Component Overrides
+  ------------------------------------------------------------------------------------------------------------------- */
+  .Posts {
+    &-results-ct { min-height: 120px; }
+    &-results {
+      display: none; margin: 0; padding: 0; list-style: none;
+      > li:last-child > .Post { margin-bottom: 0; }
+    }
+    &.is-loading {}
+    &.is-loaded {
+      .Posts-results-ct { min-height: inherit; }
+      .Posts-results { display: block; }
+    }
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------------
   # Post Component Overrides
   ------------------------------------------------------------------------------------------------------------------- */
-    .Post-author,
-    .Post-date { white-space: nowrap; }
+    .Post {
+      &-ct {
+        &.ng-enter,
+        &.ng-leave,
+        &.ng-move {
+          -webkit-transition: 0.3s linear opacity;
+          -moz-transition: 0.3s linear opacity;
+          -o-transition: 0.3s linear opacity;
+          transition: 0.3s linear opacity;
+        }
+
+        &.ng-enter,
+        &.ng-move { opacity: 0; }
+
+        &.ng-move.ng-move-active,
+        &.ng-enter.ng-enter-active { opacity: 1; }
+
+        &.ng-leave { opacity: 1; }
+
+        &.ng-leave.ng-leave-active { opacity: 0; }
+      }
+      &-author,
+      &-date { white-space: nowrap; }
+    }
 
   /* -------------------------------------------------------------------------------------------------------------------
   # Post--summary Component Overrides

@@ -1,0 +1,38 @@
+
+  /* -----------------------------------------------------------------------------------------------------------------
+  # Mask Component
+
+  A `Mask` component represents an element "overlay".  That is, it is a component designed to completely cover, or
+  overlay, another element.
+
+  ## Markup
+
+  <*> class="Mask-ct"
+    <div> class="Mask  {property-classes}*"
+      {Mask-msg}*
+  ----------------------------------------------------------------------------------------------------------------- */
+    /* Structural styles: */
+    .Mask {
+      position: absolute; width: 100%; height: 100%;
+      &-ct { position: relative; }
+      &[disabled] { display: none; }
+    }
+
+    /* Presentation styles: */
+    .Mask {}
+
+  /*
+  # Mask-msg Component
+
+  A `Mask-msg` component represents a message inside a `Mask` component.
+
+  ## Markup
+
+  <div> class="Mask-msg  {property-classes}*"
+    [{other-elements}]*
+  ------------------------------------------------------------------------- */
+    /* Structural styles: */
+    .Mask-msg { position: absolute; }
+
+    /* Presentation styles: */
+    .Mask-msg {}

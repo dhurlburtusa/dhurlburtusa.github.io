@@ -6,6 +6,90 @@ doc:
     head:
       cls: no-js  Doc  Doc--blog  Doc--blog--index
       title: Blog - DH
+    body:
+      script: |
+        <script>
+          (function (GBL) {
+            var DATE_REGEX = /(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2}):(\d{2})/;
+
+            GBL.toDate = function (str) {
+              var date, day, month, hour, minutes, results, seconds, year;
+
+              date = null;
+              results = str.match(DATE_REGEX);
+              if (results) {
+                year = results[1];
+                month = results[2];
+                day = results[3];
+                hour = results[4];
+                minutes = results[5];
+                seconds = results[6];
+                date = new Date(Date.UTC(year, month - 1, day, hour, minutes, seconds));
+              }
+              return date;
+            };
+          })(this);
+
+          (function (GBL) {
+            var module = angular.module("PostsModule", [
+                "ngAnimate",
+                // Needed for ng-bind-html.
+                "ngSanitize"
+              ]
+            );
+
+            module.controller("PostsCtrl", [
+                "$scope", "$http",
+                function ($scope, $http) {
+                  var onError, onSuccess, request;
+
+                  $scope.find = {
+                    tags: "",
+                    title: ""
+                  };
+                  $scope.status = "loading";
+
+                  onSuccess = function (response) {
+                    var data, posts;
+
+                    data = response.data;
+                    posts = data.posts;
+
+                    posts.forEach(function (post, idx, posts) {
+                      post.date = GBL.toDate(post.date);
+                    });
+
+                    $scope.status = "loaded";
+                    $scope.posts = posts;
+                  };
+                  onError = function (response) {
+                    $scope.status = "loaded";
+                    $scope.posts = [];
+                  };
+                  request = $http.get(DH.cfg.site.baseurl + '/static/data/posts.json');
+                  request.then(onSuccess, onError);
+                }
+              ]
+            );
+          })(this);
+
+          (function () {
+            var app = angular.module("app", ["PostsModule"]);
+
+            app.config([
+                "$httpProvider", "$interpolateProvider",
+                function($httpProvider, $interpolateProvider) {
+                  $httpProvider.useLegacyPromiseExtensions(false);
+
+                  $interpolateProvider.startSymbol('[[');
+                  $interpolateProvider.endSymbol(']]');
+                }
+              ]
+            );
+
+          })();
+        </script>
+
 title: DH Blog
 ---
 
@@ -14,27 +98,44 @@ title: DH Blog
 {% endcapture %}
 
 {% capture body %}
-  {% for post in paginator.posts %}
-    <div class="Post  Post--summary">
-      <header class="Post-hd">
-        <h4 class="Post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
-        <div class="Post-author-date">
-          <small class="Post-author">{{ post.author }}</small>
-          <small>&bull;</small>
-          <small class="Post-date">{{ post.date | date: "%F" }}</small>
+  <div ng-app="app">
+    <div class="Posts  is-[[status]]" ng-controller="PostsCtrl">
+      <form class="form-inline  with-margin-bottom" role="form">
+        <label>Find posts</label>
+        <div class="form-group">
+          <label class="sr-only">Tag Contains</label>
+          <input type="text" class="form-control" ng-model="find.tags" placeholder="where tag contains">
         </div>
-      </header>
-      <main class="Post-bd  Post-excerpt">
-        {{ post.excerpt }}
-      </main>
+        <div class="form-group">
+          <label class="sr-only">Title Contains</label>
+          <input type="text" class="form-control" ng-model="find.title" placeholder="where title contains">
+        </div>
+      </form>
+      <div class="Posts-results-ct  Mask-ct">
+        <div class="Mask" ng-disabled="status != 'loading'">
+          <div class="Mask-msg">Loading...</div>
+        </div>
+        <ul class="Posts-results" ng-cloak>
+          <li class="Post-ct" ng-repeat="post in posts | filter: find">
+            <div class="Post  Post--summary">
+              <header class="Post-hd">
+                <h4 class="Post-title"><a ng-href="/home/repos/github/dhurlburtusa/branches/master/dhurlburtusa.github.io/_site[[post.url]]">[[post.title]]</a></h4>
+                <div class="Post-author-date-tags">
+                  <small class="Post-author">[[post.author]]</small>
+                  <small>&bull;</small>
+                  <small class="Post-date">[[post.date | date: 'mediumDate']]</small>
+                  <span ng-repeat="tag in post.tags"> <small>&bull;</small> <small>[[tag]]</small></span>
+                </div>
+              </header>
+              <main class="Post-bd">
+                <div class="Post-excerpt" ng-bind-html="post.excerpt"></div>
+              </main>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  {% endfor %}
+  </div>
 {% endcapture %}
 
-{% capture footer %}
-<div class="Toolbar" role="toolbar">
-  {% include Paginator.html %}
-</div>
-{% endcapture %}
-
-{%include Main.html cls="l-Page--fixedWidth" hd=header bd=body ft=footer %}
+{%include Main.html cls="l-Page--fixedWidth" hd=header bd=body %}
