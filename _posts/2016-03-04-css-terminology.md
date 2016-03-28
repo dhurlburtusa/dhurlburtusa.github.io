@@ -27,7 +27,7 @@ doc:
         </style>
 
 author: Danny Hurlburt
-date: 2016-03-04 18:31:00 -0700
+date: 2016-03-04 07:00:00
 tags: css
 ---
 

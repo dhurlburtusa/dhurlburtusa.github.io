@@ -8,7 +8,7 @@ doc:
       title: JSON is not a JavaScript Object and Vice Versa - Blog - DH
 
 author: Danny Hurlburt
-#date: 2016-03-23 07:00:00
+date: 2016-03-23 07:00:00
 tags: json javascript
 title: JSON is not a JavaScript Object and Vice Versa
 ---

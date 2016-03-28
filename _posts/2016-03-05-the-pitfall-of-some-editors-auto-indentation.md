@@ -8,9 +8,8 @@ doc:
       title: The Pitfall of Some Editor's Auto Indentation - Blog - DH
 
 author: Danny Hurlburt
-date: 2016-03-05 08:28:00 -0700
+date: 2016-03-05 07:00:00
 tags: code indentation pitfall
-# Override the auto-gen page title to correct capitalization and add in missing punctuation.
 title: The Pitfall of Some Editor's Auto Indentation
 ---
 
