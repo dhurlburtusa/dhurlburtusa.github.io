@@ -28,10 +28,15 @@ Theses are the blog styles that override or augment the site styles.
   # Posts Component Overrides
   ------------------------------------------------------------------------------------------------------------------- */
   .Posts {
+    &-error { display: none; margin-bottom: 0; }
     &-results-ct { min-height: 120px; }
     &-results {
       display: none; margin: 0; padding: 0; list-style: none;
       > li:last-child > .Post { margin-bottom: 0; }
+    }
+    &.is-load-error {
+      .Posts-results-ct { min-height: inherit; }
+      .Posts-error { display: block; }
     }
     &.is-loading {}
     &.is-loaded {

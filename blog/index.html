@@ -61,18 +61,22 @@ doc:
                     tags: "",
                     title: ""
                   };
-                  $scope.status = "loading";
+                  $scope.load = {
+                    error: "",
+                    status: "loading"
+                  };
 
                   onSuccess = function (posts) {
                     posts.forEach(function (post, idx, posts) {
                       post.date = GBL.toDate(post.date);
                     });
 
-                    $scope.status = "loaded";
+                    $scope.load.status = "loaded";
                     $scope.posts = posts;
                   };
                   onError = function (response) {
-                    $scope.status = "loaded";
+                    $scope.load.error = "Unable to loads posts.";
+                    $scope.load.status = "load-error";
                     $scope.posts = [];
                   };
                   PostRepo.query(onSuccess, onError);
@@ -107,7 +111,7 @@ title: DH Blog
 
 {% capture body %}
   <div ng-app="app">
-    <div class="Posts  is-[[status]]" ng-controller="PostsCtrl">
+    <div class="Posts  is-[[load.status]]" ng-controller="PostsCtrl">
       <form class="form-inline  with-margin-bottom" role="form">
         <label>Find posts</label>
         <div class="form-group">
@@ -120,8 +124,11 @@ title: DH Blog
         </div>
       </form>
       <div class="Posts-results-ct  Mask-ct">
-        <div class="Mask" ng-disabled="status != 'loading'">
+        <div class="Mask" ng-disabled="load.status != 'loading'">
           <div class="Mask-msg">Loading...</div>
+        </div>
+        <div class="Posts-error alert alert-danger" ng-disabled="load.status != 'load-error'" role="alert">
+          <strong>Uh Oh!</strong> [[load.error]]
         </div>
         <ul class="Posts-results" ng-cloak>
           <li class="Post-ct" ng-repeat="post in posts | filter: find">
