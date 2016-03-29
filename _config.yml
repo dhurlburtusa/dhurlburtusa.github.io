@@ -12,7 +12,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
 
 link:
   angular_csp:
