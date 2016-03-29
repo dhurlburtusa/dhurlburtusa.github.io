@@ -101,6 +101,8 @@ defaults:
       doc:
         html:
           head:
+            base:
+              href: *baseurl
             link:
               stylesheets:
                 extras:

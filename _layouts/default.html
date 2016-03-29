@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.doc.html.head.title }}</title>
+  {% if page.doc.html.head.base.href || page.doc.html.head.base.target %}
+    <base href="{{ page.doc.html.head.base.href }}/" target="{{ page.doc.html.head.base.target }}">
+  {% endif %}
   {% if page.doc.html.head.meta.http_equiv.X_UA_Compatible %}
     <meta http-equiv="X-UA-Compatible" content="{{ page.doc.html.head.meta.http_equiv.X_UA_Compatible }}">
   {% endif %}

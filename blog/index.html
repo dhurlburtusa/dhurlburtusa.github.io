@@ -53,9 +53,9 @@ doc:
             );
 
             module.controller("PostsCtrl", [
-                "$scope", "PostRepo",
-                function ($scope, PostRepo) {
-                  var onError, onSuccess, request;
+                "$location", "$scope", "$timeout", "$window", "PostRepo",
+                function ($location, $scope, $timeout, $window, PostRepo) {
+                  var onError, onFindChange, onPopstate, onSuccess, request, syncFindWithLocation, syncLocationWithFind;
 
                   $scope.find = {
                     tags: "",
@@ -80,6 +80,36 @@ doc:
                     $scope.posts = [];
                   };
                   PostRepo.query(onSuccess, onError);
+
+                  syncFindWithLocation = function () {
+                    var urlParams = $location.search();
+                    $scope.find = {
+                      tags: urlParams.tags || "",
+                      title: urlParams.title || ""
+                    };
+                  };
+
+                  syncLocationWithFind = function () {
+                    $location.search('tags', $scope.find.tags || null);
+                    $location.search('title', $scope.find.title || null);
+                  };
+                  onFindChange = function (newFind, oldFind, scope) {
+                    if (newFind !== oldFind) {
+                      if (onFindChange._timeoutPromise) {
+                        $timeout.cancel(onFindChange._timeoutPromise);
+                      }
+                      onFindChange._timeoutPromise = $timeout(syncLocationWithFind, 1000);
+                    }
+                  };
+                  $scope.$watch("find", onFindChange, true);
+
+                  onPopstate = function (evt) {
+                    // HACK: For some reason the two-way data binding works correctly when queued in a timeout.
+                    $timeout(syncFindWithLocation, 1);
+                  };
+                  $window.addEventListener('popstate', onPopstate);
+
+                  syncFindWithLocation();
                 }
               ]
             );
@@ -89,12 +119,15 @@ doc:
             var app = angular.module("app", ["PostsModule"]);
 
             app.config([
-                "$httpProvider", "$interpolateProvider",
-                function($httpProvider, $interpolateProvider) {
+                "$httpProvider", "$interpolateProvider", "$locationProvider",
+                function($httpProvider, $interpolateProvider, $locationProvider) {
                   $httpProvider.useLegacyPromiseExtensions(false);
 
                   $interpolateProvider.startSymbol('[[');
                   $interpolateProvider.endSymbol(']]');
+
+                  $locationProvider.html5Mode({ enabled: true, rewriteLinks: false });
+                  $locationProvider.hashPrefix('!');
                 }
               ]
             );
