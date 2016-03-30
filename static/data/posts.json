@@ -16,7 +16,7 @@
         "excerpt": {{ post.excerpt | jsonify | replace: "\n", " " }},
         "tags":  {{ post.tags | jsonify }},
         "title": {{ post.title | jsonify }},
-        "url": {{ post.url | jsonify }}
+        "url": {{ post.url | replace_first: '/' | jsonify }}
       }{% unless forloop.last %},{% endunless %}
     {% endunless %}
   {% endfor %}
