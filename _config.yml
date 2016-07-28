@@ -14,7 +14,7 @@ exclude:
 
 gems:
   - jekyll-paginate
-  # - jekyll-sitemap
+  - jekyll-sitemap
 
 link:
   angular_csp:
