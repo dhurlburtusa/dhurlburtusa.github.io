@@ -63,7 +63,7 @@ title: Dan Hurlburt
 # Default Page Settings
 
 defaults:
-  - 
+  -
     scope:
       path: ""
     values:
@@ -84,7 +84,7 @@ defaults:
                   - bootstrap
                   - css_properties
                   - site
-  - 
+  -
     scope:
       path: blog
     values:
@@ -95,7 +95,7 @@ defaults:
               stylesheets:
                 extras:
                   - blog
-  - 
+  -
     scope:
       path: blog
       type: pages
