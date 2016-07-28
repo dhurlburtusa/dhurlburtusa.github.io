@@ -1,7 +1,7 @@
 # See [Jekyll Configuration](http://jekyllrb.com/docs/configuration/)
 
 # Site Settings
-#baseurl: &baseurl "/home/repos/github/dhurlburtusa/branches/master/dhurlburtusa.github.io/_site"
+#baseurl: &baseurl "/home/repos/github/dhurlburtusa/dhurlburtusa.github.io/tree/master/_site"
 baseurl: &baseurl "https://dhurlburtusa.github.io"
 
 description: >
