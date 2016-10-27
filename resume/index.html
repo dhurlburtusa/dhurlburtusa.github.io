@@ -1,0 +1,247 @@
+---
+layout: page
+
+doc:
+  html:
+    head:
+      cls: Doc  Doc--resume
+      title: Resume - Danny Hurlburt - dhurlburtusa
+      style: |
+        <style>
+          html {}
+          body { background: lightgrey; }
+
+          /* Regions (Ordered from outer most to inner most) */
+          .Page {}
+          .Page-hd {}
+          .Page-bd {}
+          .Page-ft {}
+          .Main { width: 9in; min-height: 11in; margin: 10px auto; background: white; }
+
+          .Main { overflow: auto; } /* Prevents margin bleed-through. */
+          .Main-hd {}
+          .Main-bd { margin: 0.75in; }
+          .Main-ft {}
+
+          /* Modules or Module Overrides (Ordered from inner most to outer most) */
+          .Resume { position: relative; }
+          .Resume .CompanyName,
+          .Resume .JobTitle,
+          .Resume .SchoolName { font-weight: bold; }
+
+          .Resume-name { position: relative; top: 16px; text-align: center; }
+          /* NOTE: The background is !important to override bootstrap using !important to make backgrounds transparent for print. */
+          .Resume-name h1 { display: inline-block; position: relative; top: -16px; margin: 0 auto; padding: 0 8px; background: white !important; font-size: 28px; }
+
+          .Resume-contact { text-align: center; }
+
+          .Resume-job,
+          .Resume-qual,
+          .Resume-tech,
+          .Resume-proj,
+          .Resume-expe,
+          .Resume-educ { position: relative; margin-top: 20px; padding: 12px 0 0 .2in; border-top: 2px solid black; }
+          /* NOTE: The background is !important to override bootstrap using !important to make backgrounds transparent for print. */
+          .Resume-qual h2,
+          .Resume-tech h2,
+          .Resume-proj h2,
+          .Resume-expe h2,
+          .Resume-educ h2 { position: absolute; top: -11px; left: 0; margin: 0; padding-right: 8px; background: white !important; font-size: 18px; }
+
+          .Resume-job ul,
+          .Resume-tech ul,
+          .Resume-expe ul { margin-bottom: 0; padding-left: 30px; }
+
+          .Resume-job li,
+          .Resume-tech li,
+          .Resume-expe li { list-style-type: square; }
+
+          .Resume-job { margin-bottom: 20px; }
+
+          .Resume-job-title { position: absolute; top: -13px; left: 0; width: 100%; text-align: center; }
+          .Resume-job-title p { display: inline-block; margin: 0 auto; padding: 0 8px; background: white !important; font-size: 18px; font-weight: bold; }
+
+          .Resume-tech table { width: 100%; }
+          .Resume-tech td { vertical-align: top; }
+          .Resume-tech td + td { width: 46%; }
+
+          .Resume-expe-realgo .Dates { float: right; }
+
+          .Resume-refe p:last-child { margin-bottom: 0; }
+
+          @media print {
+            a,
+            a:visited { text-decoration: none; }
+            a[href]:after { content: ""; }
+            abbr[title]:after { content: ""; }
+            .Main { font-size: 110%; margin: 0; }
+            .Main-bd { margin: 0; }
+          }
+        </style>
+    body:
+      script: |
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-86237250-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+---
+
+{% include OldBrowserWarning.html %}
+{% include NoScriptWarning.html %}
+
+<section class="Main" id="main">
+  <div class="Main-bd" id="mainBd">
+    <article class="Resume">
+      <div class="Resume-name">
+        <h1>Danny Hurlburt</h1>
+      </div>
+      <div class="Resume-contact">
+        <a href="https://www.linkedin.com/in/dhurlburtusa">https://www.linkedin.com/in/dhurlburtusa</a> &bull;
+        <a href="http://dhurlburtusa.github.io/">http://dhurlburtusa.github.io/</a>
+      </div>
+      <div class="Resume-job">
+        <div class="Resume-job-title"><p>Senior Software Developer</p></div>
+        <ul>
+          <li>Over 10 years of full stack web development experience providing SaaS</li>
+          <li>Experience writing secure front-ends and back-ends</li>
+          <li>
+            Proficient in Computer Science fundamentals including object oriented design (OOD), data structures, algorithm design,
+            design patterns, problem solving, and complexity analysis
+          </li>
+          <li>In-depth understanding of web technologies including HTML5, CSS3, and JavaScript (ES6)</li>
+          <li>
+            Years of experience using many JS frameworks/libraries including jQuery, AngularJS, Backbone.js, Ext-JS, Sencha Touch,
+            et. al
+          </li>
+          <li>Experience using CSS libraries including Bootstrap and Skeleton</li>
+          <li>Experience with x-browser development (Chrome, FireFox, IE, mobile, etc)</li>
+          <li>Years of experience utilizing AJAX to develop single-page applications (SPA)</li>
+          <li>Experience developing fully responsive HTML5-based web applications with a RESTful API</li>
+          <li>Experience designing RESTful APIs primarily with JSON</li>
+          <li>Years of experience with Java technologies including JavaEE (J2EE), Hibernate, Spring, and Struts</li>
+          <li>
+            Understands professional software engineering practices for the full software development lifecycle including
+            coding standards, code reviews, source control management, build processes, testing, and operations
+          </li>
+          <li>Years of experience with open source and open source tools including Spring, Hibernate, MySQL, and many more</li>
+          <li>Years of experience using SQL Server, MySQL, postgreSQL, and MongoDB</li>
+          <li>Years of experience with ORMs including Active Record, ColdFusion ORM, and Hibernate</li>
+          <li>Experience with GIS technologies including MapServer, OpenLayers, and Google Maps</li>
+          <li>Works well with developers on design specifications and programming using Agile development methodologies</li>
+          <li>Exceptional troubleshooting skills, debugging skills, and problem solving skills</li>
+          <li>Follows best software practices to produce a thoroughly designed and tested product</li>
+          <li>Enjoys continuously learning and developing new skills especially related to web development</li>
+        </ul>
+      </div>
+      <div class="Resume-tech">
+        <h2>Technical Skills</h2>
+        <table role="presentation">
+          <tr>
+            <td>
+              <ul>
+                <li>ColdFusion, Java, JavaScript (ES6), PHP, Python, Ruby</li>
+                <li>Bootstrap 3, Compass, CSS, CSS3, HTML5, Responsive (RWD), SASS, Skeleton 2</li>
+                <li>AngularJS, Backbone.js, Ext-JS, Google Maps, jQuery, Node.js, Sencha Touch, underscore.js</li>
+                <li>Ant, Babel, Browserify, Grunt, Gulp, Maven, Webpack</li>
+                <li>FW/1, Jekyll, Ruby on Rails, Spring MVC, Struts</li>
+                <li>Jenkins, Travis CI</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ActiveRecord, Hibernate, MongoDB, MySQL, PostgreSQL, SQL-Server, T-SQL</li>
+                <li>BDD, Cucumber, Jasmine, JUnit, Karma, pytest, RSpec, Selenium, TDD</li>
+                <li>CVS, Git, Hg, SVN, VSS</li>
+                <li>JSON, Markdown, reST, YAML</li>
+                <li>ERB, FreeMarker, Handlebars, Liquid, JSP</li>
+                <li>JavaDoc, JSDoc, JSDuck, RDoc, Sphinx</li>
+                <li>Apache HTTPD, Tomcat</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Resume-expe">
+        <h2>Experience</h2>
+        <div class="Resume-expe-realgo">
+          <p>
+            <span class="CompanyName">RealGo, Inc</span> &mdash; Fort Collins, CO <span class="Dates">2005-2016</span><br>
+            <span class="JobTitle">Senior Software Developer</span>
+          </p>
+          <ul>
+            <li>
+              Worked on front-end development using standard web technologies to build re-usable components
+            </li>
+            <li>
+              Worked on back-end development building database objects including tables, views, stored-procedures, constraints, and triggers
+            </li>
+            <li>
+              Worked on back-end development building controllers, models, views, unit tests, integration tests, regression tests,
+              and end-to-end tests
+            </li>
+            <li>
+              Designed, developed, and maintained core and domain-specific Java and JavaScript libraries
+            </li>
+            <li>
+              Developed and maintained various projects built with various technologies including Java, J2EE (aka JavaEE),
+              Spring Framework, Cold Fusion, Ruby, Python
+            </li>
+            <li>
+              Abstracted legacy database structure with an entity metadata system and a custom search API built with Java
+            </li>
+            <li>
+              Researched, compared, and tested new technologies
+            </li>
+            <li>
+              Performed performance analysis and fixed performance issues
+            </li>
+            <li>
+              Searched for and fixed data-integrity issues
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="Resume-proj">
+        <h2>Projects</h2>
+        <p>
+          Designed, developed, and implemented a JavaScript-based class system which allowed easier OOP with JavaScript
+          (<a href="https://dhurlburtusa.github.io/YourJS/docs/api/#!/api/YJS.core.ClassManager">https://dhurlburtusa.github.io/YourJS/docs/api/#!/api/YJS.core.ClassManager</a>).
+        </p>
+        <p>
+          Designed, developed, and implemented a JavaScript-based logging system which allowed configurable logging
+          (<a href="https://dhurlburtusa.github.io/YourJS/docs/api/#!/guide/logging">https://dhurlburtusa.github.io/YourJS/docs/api/#!/guide/logging</a>).
+        </p>
+        <p>
+          Designed, developed, implemented, published a couple NPM packages (<a href="https://www.npmjs.com/~dhurlburtusa">https://www.npmjs.com/~dhurlburtusa</a>)
+        </p>
+      </div>
+      <div class="Resume-cert">
+        <h2>Certifications</h2>
+        <p>
+          M101P: MongoDB for Developers (<a href="https://university.mongodb.com/course_completion/0efead74efe14440b8849e958454dc33">https://university.mongodb.com/course_completion/0efead74efe14440b8849e958454dc33</a>)
+        </p>
+      </div>
+      <div class="Resume-educ">
+        <h2>Education</h2>
+        <p>
+          <span class="SchoolName">Colorado State University</span> &mdash; Fort Collins, CO<br>
+          Bachelor of Science: Computer Science
+          <span class="float-right">GPA: 3.7 / 4.0</span>
+        </p>
+        <p>
+          <span class="SchoolName">Colorado State University</span> &mdash; Fort Collins, CO<br>
+          Bachelor of Science: Chemical Engineering
+          <span class="float-right">GPA: 3.4 / 4.0</span>
+        </p>
+        <p>
+          <span class="SchoolName">Community College of Aurora</span> &mdash; Aurora, CO<br>
+          Associate of Science
+        </p>
+      </div>
+    </article>
+  </div> <!-- eo div.Main-bd -->
+</section>
