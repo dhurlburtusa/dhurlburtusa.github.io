@@ -76,6 +76,8 @@ doc:
             a:visited { text-decoration: none; }
             a[href]:after { content: ""; }
             abbr[title]:after { content: ""; }
+            /* HACK: page-break properties weren't working as expected. */
+            .Resume-expe { margin-top: 5em; }
             .Main { font-size: 110%; margin: 0; }
             .Main-bd { margin: 0; }
             .Page-ft { display: none; }
@@ -140,7 +142,7 @@ doc:
           <li>Enjoys continuously learning and developing new skills especially related to web development</li>
         </ul>
       </div>
-      <div class="Resume-tech  page-break-after-always">
+      <div class="Resume-tech">
         <h2>Technical Skills</h2>
         <table role="presentation">
           <tr>
