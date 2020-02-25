@@ -5,8 +5,8 @@
 baseurl: &baseurl "https://dhurlburtusa.github.io"
 
 description: >
-  Dan Hurlburt, senior software developer, senior web application developer.
-  Dan Hurlburt started learning HTML, CSS, and JavaScript over ten years ago.
+  Danny Hurlburt, senior software developer, senior web application developer.
+  Danny Hurlburt started learning HTML, CSS, and JavaScript over ten years ago.
 
 exclude:
   - Gemfile
@@ -58,7 +58,7 @@ script:
 
 timezone: America/Denver
 
-title: Dan Hurlburt
+title: Danny Hurlburt
 
 # Default Page Settings
 
